@@ -71,9 +71,29 @@ a {
     <hr>
     
     <label for="uname"><b>User Name</b></label>
-     <input type="text" placeholder="Enter User Name" name="Uname" id="Uname" required/>
+    <input type="text" placeholder="Enter User Name" name="Uname" id="Uname" required/>
+
+    <label for="firstName"><b>Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" required/>
+
+    <label for="lastName"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" required/>
+
+    <label for="Gender"><b>Gender</b></label><br />
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+
+    <br /><br />
+
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+    <label for="verifypsw"><b>Verify Password</b></label>
+    <input type="password" placeholder="Verify password" name="verifypsw" id="verifypsw" required/>
     <hr>
     <button type="submit" class="registerbtn">Register</button>
       <asp:Literal ID="registerError" runat="server"></asp:Literal>
