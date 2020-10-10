@@ -27,33 +27,41 @@
     <table>
         <tr>
             <td>
-                <a name="interstellar">A movie by christopher nolan, it's about travel through space and time. It's a great movie that takes the idea of times and breaks it into little pieces so our minds can somewhat undestand the scale of the universe and our own lives</a>
+                <a name="interstellar"><h2 style="color:rebeccapurple;">Interstellar</h2>
+                    A movie by Christopher Nolan,about travel through space and time.<br /> It's a great movie that takes the idea of times and breaks it into little pieces so our minds can somewhat undestand the scale of the universe and our own lives.</a>
+                    <br /><br />
             </td>
         </tr>
         <tr>
             <td>
-                <a name="jojo rabbit">A movie by hen</a> 
+                <a name="jojo rabbit"><h2 style="color:rebeccapurple;">Jojo Rabbit</h2>A movie by Taika Waititi,a comedy-drama film set in Germany. It takes us through a funny and sad journey and lets us see world war II through a different point of view.
+                <br /><br/>
             </td>
         </tr>
         <tr>
             <td>
-                <a name="the social network">a movie by christopher nolan</a>
+                <a name="the social network"><h2 style="color:rebeccapurple;"> The Social Network</h2>A movie directed by David Fincher, it shows the process of making the famous Facebook through Mark Zuckerberg’s point of view.</a>
+                <br /><br />
             </td>
         </tr>
         <tr>
             <td>
-                <a name="parasite">a movie by christopher nolan</a>
+                <a name="parasite"><h2 style="color:rebeccapurple;">Parasite</h2>A movie by Bong Joon Ho, it tells the story of two Korean families, one is poor and the other is wealthy.<br />
+                  It reveals the sad truth about society and opens a very interesting discussion on the subject with a very surprising end.</a>
+                 <br /><br/>   
             </td>
         </tr>
         <tr>
             <td>
-                <a name="la la land">a movie by christopher nolan</a>
+                <a name="la la land"><h2 style="color:rebeccapurple;">La La Land</h2>A movie by Damien Chazelle, a great story about two artists falling in love and having to sacrifice their love for their dreams</a>
+                <br /><br/>  
             </td>
         </tr>
         <tr>
             <td>
-                <a name="once upon a time">a movie by christopher nolan</a>
-            </td>
+                <a name="once upon a time"><h2 style="color:rebeccapurple;">Once Upon A Time In Hollywood</h2>A movie by Quentin Tarantino, a film that takes place in 70's Hollywood.<br /> It's based on a real story with a Quentin Tarantino ending</a>
+                <br /><br/>  
+            </td>  
         </tr>
     </table>
 </asp:Content>

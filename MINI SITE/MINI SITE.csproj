@@ -68,12 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\about page.png" />
+    <Content Include="images\avatar.jpg" />
     <Content Include="images\cinemalogo.png" />
     <Content Include="images\gallery page.png" />
     <Content Include="images\home page.png" />
     <Content Include="images\interstellar.jpg" />
     <Content Include="images\jojo rabbit.jpg" />
     <Content Include="images\la la land.jpg" />
+    <Content Include="images\LOGIN.png" />
     <Content Include="images\movie theater.jpg" />
     <Content Include="images\once upon a time in hollywood.jpg" />
     <Content Include="images\parasite.jpg" />
@@ -85,6 +87,8 @@
     <Content Include="homepage.aspx" />
     <Content Include="about.aspx" />
     <Content Include="gallery.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="register.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +119,20 @@
     </Compile>
     <Compile Include="gallery.aspx.designer.cs">
       <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

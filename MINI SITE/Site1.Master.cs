@@ -11,7 +11,10 @@ namespace MINI_SITE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (this.Session["login_user"] != null) {
+                Response.Write("Hello " + (this.Session["login_user"] as String) + "!");
+            }
+            
         }
     }
 }
