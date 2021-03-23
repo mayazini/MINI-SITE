@@ -3,7 +3,7 @@
     <table>
         <tr>
             <td style="height: 700px;">
-                 <h4>Dear cinema lovers,</h4>
+                 <h4>Dear cinema lovers,'</h4>
                 <p style="vertical-align:top; height: 677px; font-size:30px"> 
                 This project is meant for us to share our creative ideas.
                 <br />
