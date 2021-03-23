@@ -67,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
+    <Content Include="App_Data\Database2.mdf" />
+    <Content Include="App_Data\Database2_log.ldf">
+      <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
     <Content Include="images\about page.png" />
     <Content Include="images\avatar.jpg" />
@@ -97,6 +97,7 @@
     <Content Include="testing java.aspx" />
     <Content Include="dotnet.aspx" />
     <Content Include="calculatorGet.aspx" />
+    <Content Include="AdminManage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SQLHelper.cs" />
     <Compile Include="testing java.aspx.cs">
       <DependentUpon>testing java.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,6 +164,13 @@
     </Compile>
     <Compile Include="calculatorGet.aspx.designer.cs">
       <DependentUpon>calculatorGet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManage.aspx.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminManage.aspx.designer.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

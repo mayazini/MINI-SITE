@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="MINI_SITE.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    
     <script type="text/javascript" >
-
+        
         function checkEmail() {
             var emailInput = document.getElementById("email");
             var bValidEmail = true;
@@ -157,8 +157,8 @@
             var bValidEmail = checkEmail();
             var bValidusername = checkUserName();
             var bValidId = checkId();
-            var vVerifyAll = bValidPassword && bValidEmail && bValidusername && bValidId;
-            return vVerifyAll;
+            var bVerifyAll = bValidPassword && bValidEmail && bValidusername && bValidId;
+            return bVerifyAll;
         }
 
 
@@ -171,6 +171,7 @@
     <label for="uname"><b>User Name</b></label>
     <input  type="text" placeholder="Enter User Name" name="Uname" id="Uname" required/>
     <label for="uname" id="UnameLabel" style="color:red"></label>
+    <label for="uname" id="UnameLabel2" style="color:red"><%=errorMsg %></label>
        <br /><br />
 
     <label for="firstName"><b>Name</b></label>

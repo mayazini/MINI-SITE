@@ -10,7 +10,7 @@
  
 </head>
 <body>
-    <form id="form1" runat="server" method="post">   
+    <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >   
         <div style="background-color:#696969">
             <table width: 100%>
                 <tr style="height:50px">
@@ -20,13 +20,16 @@
                         <a href="gallery.aspx"><img src="images/gallery%20page.png" style="height: 50px; width: 190px;vertical-align:top" /></a>&nbsp;
                         <a href="login.aspx"><img src="images/LOGIN.png" style="height: 50px; width: 190px;vertical-align:top" /></a>
                         <a href="homepage.aspx" class="buttonhref">Stam</a>--%>
-                        <a class="btn btn-primary" href="homepage.aspx" role="button">Home Page</a>
-                        <a class="btn btn-primary" href="about.aspx" role="button">About Page</a>
-                        <a class="btn btn-primary" href="gallery.aspx" role="button">Gallery Page</a>
+                        <a class="btn btn-primary" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;
+                        <a class="btn btn-primary" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;
+                        <a class="btn btn-primary" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;
                         <a class="btn btn-primary" href="login.aspx" role="button">Login Page</a>
+                        
                     </td>                   
                     <td style="width: 10%;height:40px">
-                        <img src="images/cinemalogo.png" style="height: 90px; width: 120px;vertical-align:top; float:right"/>  
+                        <img src="images/cinemalogo.png" style="height: 90px; width: 120px;vertical-align:top; float:right"/> 
+                        <br />        
+                             <%=userName %>
                     </td>
                 </tr>
                 </table>

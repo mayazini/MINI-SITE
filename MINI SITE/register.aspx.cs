@@ -10,37 +10,27 @@ namespace MINI_SITE
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
+        public string errorMsg="";
         protected void Page_Load(object sender, EventArgs e)
         {
-            String password = Request["password"];
             String uname = Request["uname"];
-
-            Hashtable htUsers = null;
-
-            if (password != null && uname != null)
+            if (uname != null)
             {
-                if (Application["GlobalUsers"] == null)
+                string userNamedb = SQLHelper.SelectScalarToString("select username from users where username=N'"+uname+"'");
+                if (userNamedb != "")
                 {
-
-                    htUsers = new Hashtable();
-                    this.Application["GlobalUsers"] = htUsers;
+                    errorMsg = "userName already exists, try again";
                 }
                 else
                 {
-                    htUsers = this.Application["GlobalUsers"] as Hashtable;
+                    string fName = Request["firstName"];
+                    string lName = Request["lastName"];
+                    string pass = Request["password"];
+                    string id = Request["id"];
+                    SQLHelper.DoQuery("insert into users (userName, firstName, lastName, password, id, admin) values ('"+uname+"','"+fName+"','"+lName+"','"+pass+"','"+id+"','false')");
+                    Response.Redirect("Login.aspx");
                 }
-                if (!htUsers.ContainsKey(uname))
-                {
-                    htUsers.Add(uname, password);
-                    Response.Redirect("login.aspx");
-                }
-                else
-                {
-                    registerError.Text = "<br/> user already exists";
-                }
-                
-                
-            }            
+            }                           
         }
     }
 }

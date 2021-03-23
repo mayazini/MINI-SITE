@@ -13,7 +13,8 @@
     <input type="password" placeholder="Enter Password" name="password" required/>
         
     <input type="submit" class="submitbtn" value="login"/>
-    <asp:Literal ID="loginError" runat="server"></asp:Literal>
+      <br />
+    <%=errorMsg %>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">   
