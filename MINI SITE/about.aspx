@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="MINI_SITE.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table>
-        <!--Hello-->
         <tr>
             <td style="height: 700px;">
                  <h4>Dear cinema lovers,</h4>
