@@ -180,15 +180,23 @@
     <label for="lastName"><b>Last Name</b></label>
     <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" required/>
 
+      <label for="id"><b>Id</b></label>
+      <input type="text" placeholder="Enter Id" name="id" id="id" required />
+       <label for="id" id="IdLabel" style="color:red"></label>
+       <br /><br />
+
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" id="email" required />
       <label for="email" id="emailLabel" style="color:red"></label>
        <br /><br />
 
-      <label for="id"><b>Id</b></label>
-      <input type="text" placeholder="Enter Id" name="id" id="id" required />
-       <label for="id" id="IdLabel" style="color:red"></label>
+      <label for="instagram"><b>instagram</b></label>
+      <input type="text" placeholder="Enter instagram" name="instagram" id="instagram" required />
        <br /><br />
+
+      <label for="phone"><b>Phone number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required/>
+        <br /><br />
 
     <label for="Gender"><b>Gender</b></label><br />
     <input type="radio" id="male" name="gender" value="male">
@@ -199,11 +207,7 @@
     <label for="other">Other</label>
 
     <br /><br />
-
-    <label for="phone"><b>Phone number</b></label>
-    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required/>
-        <br /><br />
-
+  
     <label for="age"><b>Age</b></label><br />
     <select name="age" id="age">
         <option><10</option>
