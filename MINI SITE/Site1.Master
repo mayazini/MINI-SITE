@@ -4,21 +4,27 @@
 
 <html>
 <head runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <title>Cinema Lovers</title>
-<style>
-</style>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+ 
 </head>
 <body>
-        <div>
+    <form id="form1" runat="server" method="post">   
+        <div style="background-color:#696969">
             <table width: 100%>
                 <tr style="height:50px">
-                    <td style="width:50%">
-                        <a href="homepage.aspx"><img src="images/home%20page.png" style="height: 50px; width: 190px;vertical-align:top; float:left"/></a>&nbsp;&nbsp;
+                    <td style="width:70%">                                               
+                        <%--<a href="homepage.aspx"><img onclick="" src="images/home%20page.png" style="height: 50px; width: 190px;vertical-align:top; float:left"/></a>&nbsp;&nbsp;
                         <a href="about.aspx"><img src="images/about%20page.png" style="height: 50px; width: 190px;vertical-align:top" /></a>&nbsp;
                         <a href="gallery.aspx"><img src="images/gallery%20page.png" style="height: 50px; width: 190px;vertical-align:top" /></a>&nbsp;
                         <a href="login.aspx"><img src="images/LOGIN.png" style="height: 50px; width: 190px;vertical-align:top" /></a>
-                    </td>
-                    <td style="width:70%"></td>
+                        <a href="homepage.aspx" class="buttonhref">Stam</a>--%>
+                        <a class="btn btn-primary" href="homepage.aspx" role="button">Home Page</a>
+                        <a class="btn btn-primary" href="about.aspx" role="button">About Page</a>
+                        <a class="btn btn-primary" href="gallery.aspx" role="button">Gallery Page</a>
+                        <a class="btn btn-primary" href="login.aspx" role="button">Login Page</a>
+                    </td>                   
                     <td style="width: 10%;height:40px">
                         <img src="images/cinemalogo.png" style="height: 90px; width: 120px;vertical-align:top; float:right"/>  
                     </td>
@@ -36,5 +42,6 @@
                 <h2 style="text-align:right; color:blue;font-size:10px">כל זכויות שמורות למאיה זיני</h2>
             </footer>
         </div>
+        </form>
 </body>
 </html>
