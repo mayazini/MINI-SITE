@@ -11,18 +11,17 @@ namespace MINI_SITE
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
-        public string errorMsg;
-        public string user;
+        public string errorMsg="";
+        public string user ="";
         protected void Page_Load(object sender, EventArgs e)
         {
-            errorMsg = "";
-            String uname = Request["uname"];
-            String password = Request["password"];
+            String userNameForm = Request["uname"];
+            String passwordFrom = Request["password"];
   
-            if (uname != null & password != null)
+            if (Request["submitbtn"]!=null)
             {
                 errorMsg = "";
-                DataTable dtUser = SQLHelper.SelectData("select * from users where userName=N'" + uname + "' and password=N'" + password + "'");
+                DataTable dtUser = SQLHelper.SelectData("select * from users where userName=N'" + userNameForm + "' and password=N'" + passwordFrom + "'");
                 DataRow row;
                 if (dtUser.Rows.Count >= 1)
                 {
@@ -30,7 +29,7 @@ namespace MINI_SITE
                     user = row["userName"].ToString();
                     if (user != "")
                     {
-                        this.Session["login_user"] = uname;
+                        this.Session["login_user"] = userNameForm;
                         if (Convert.ToBoolean(row["admin"]))
                         {
                             this.Session["user_isAdmin"] = true;
@@ -46,7 +45,8 @@ namespace MINI_SITE
                 else
                 {
                     errorMsg = "Login failed! Try again or register<br/>";
+    
                 }
             }
-    }    }
+    }   }
 }

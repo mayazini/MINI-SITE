@@ -12,7 +12,7 @@
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required/>
         
-    <input type="submit" class="submitbtn" value="login"/>
+    <input name="submitbtn" type="submit" class="submitbtn" value="login"/>
       <br />
     <%=errorMsg %>
   </div>

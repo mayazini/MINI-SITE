@@ -98,6 +98,7 @@
     <Content Include="dotnet.aspx" />
     <Content Include="calculatorGet.aspx" />
     <Content Include="AdminManage.aspx" />
+    <Content Include="DeleteUser.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +172,13 @@
     </Compile>
     <Compile Include="AdminManage.aspx.designer.cs">
       <DependentUpon>AdminManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
