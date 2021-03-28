@@ -46,7 +46,7 @@ namespace MINI_SITE
                 }
 
                 usersList += "<td>";
-                usersList += "<a href=update.aspx?queryUsername=" + dt.Rows[i]["Username"] +
+                usersList += "<a href=UpdateUser.aspx?queryUsername=" + dt.Rows[i]["Username"] +
                     ">Update</a>";
                 usersList += "</td>";
                 usersList += "<td>";

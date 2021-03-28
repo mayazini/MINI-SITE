@@ -208,11 +208,8 @@
 
     <br /><br />
   
-    <label for="age"><b>Age</b></label><br />
-    <select name="age" id="age">
-        <option><10</option>
-        <option>>10</option>
-    </select>
+      <label for="age"><b>age</b></label>
+    <input type="text" placeholder="Enter age" id="age" name="age"/>
 
       <br /><br />
     <label for="interest"><b>Area of interest</b></label><br />

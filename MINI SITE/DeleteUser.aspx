@@ -32,5 +32,5 @@
               </tr>
           </tbody>
     </table>
-    <%=msg %>
+    <p style="color:white"> <%=msg %></p>
 </asp:Content>

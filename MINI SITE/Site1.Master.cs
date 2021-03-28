@@ -20,8 +20,7 @@ namespace MINI_SITE
                 button= "<button type='submit' class='btn btn-danger' name='logoutbtn'>Logout</button>";
                 if (Request["logoutbtn"] != null)
                 {
-                    this.Session["login_user"] = null;
-                    this.Session["user_isAdmin"] = null;
+                    Session.Abandon();
                     Response.Redirect("homepage.aspx");
 
                 }

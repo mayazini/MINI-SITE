@@ -21,41 +21,50 @@ namespace MINI_SITE
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            userName = Request.QueryString["queryUsername"];
-            if(userName != null && userName != "")
+            if (!Convert.ToBoolean(this.Session["user_isAdmin"]))
             {
-                if (Request["submitbtn"] == null)
-                {
-                    DataTable dt = SQLHelper.SelectData(string.Format("select lastName, firstName, admin from users where userName = N'{0}'", userName));
-                    DataRow row;
-                    if (dt.Rows.Count >= 1)
-                    {
-                        row = dt.Rows[0];
-                        lastName = row["lastName"].ToString();
-                        firstName = row["firstName"].ToString();
-                        //בדיקה נוספת לאדמין
-                        admin = Convert.ToBoolean(row["admin"]);
-                        if (admin)
-                        {
-                            makeTableInvisible = "style='display : none'";
-                            msg = "user " + userName + " is admin, can not be deleted";
-
-                        }
-                    }
-                }
-                else 
-                {
-                    string sql = "delete from users where userName = N'" + userName+"'";
-                    SQLHelper.DoQuery(sql);
-                    Response.Redirect("DeleteUser.aspx?message=User " + userName + " was deleted, redirecting to admin page");
-                }
+                msg = "this page is for admin only, will redirect to home page";
+                makeTableInvisible = "style='display : none'";
+                redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 5000);";
             }
             else
             {
-                msg = Request.QueryString["message"];
-                makeTableInvisible = "style='display : none'";
-                redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 1500);";
+                userName = Request.QueryString["queryUsername"];
+                if (userName != null && userName != "")
+                {
+                    if (Request["submitbtn"] == null)
+                    {
+                        DataTable dt = SQLHelper.SelectData(string.Format("select lastName, firstName, admin from users where userName = N'{0}'", userName));
+                        DataRow row;
+                        if (dt.Rows.Count >= 1)
+                        {
+                            row = dt.Rows[0];
+                            lastName = row["lastName"].ToString();
+                            firstName = row["firstName"].ToString();
+                            //בדיקה נוספת לאדמין
+                            admin = Convert.ToBoolean(row["admin"]);
+                            if (admin)
+                            {
+                                makeTableInvisible = "style='display : none'";
+                                msg = "user " + userName + " is admin, can not be deleted";
 
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string sql = "delete from users where userName = N'" + userName + "'";
+                        SQLHelper.DoQuery(sql);
+                        Response.Redirect("DeleteUser.aspx?message=User " + userName + " was deleted, redirecting to admin page");
+                    }
+                }
+                else
+                {
+                    msg = Request.QueryString["message"];
+                    makeTableInvisible = "style='display : none'";
+                    redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 3000);";
+
+                }
             }
         }
     }
