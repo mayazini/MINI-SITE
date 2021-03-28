@@ -22,7 +22,7 @@ namespace MINI_SITE
         protected void Page_Load(object sender, EventArgs e)
         {
             userName = Request.QueryString["queryUsername"];
-            if(userName != null )
+            if(userName != null && userName != "")
             {
                 if (Request["submitbtn"] == null)
                 {
@@ -47,7 +47,7 @@ namespace MINI_SITE
                 {
                     string sql = "delete from users where userName = N'" + userName+"'";
                     SQLHelper.DoQuery(sql);
-                    Response.Redirect("DeleteUser.aspx?message=User " + userName + " was deleted");
+                    Response.Redirect("DeleteUser.aspx?message=User " + userName + " was deleted, redirecting to admin page");
                 }
             }
             else

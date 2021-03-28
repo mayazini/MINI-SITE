@@ -5,28 +5,36 @@
 <html>
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
 <title>Cinema Lovers</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
- 
 </head>
-<body>
+<body style="background-color:black">
     <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >   
         <div>
-            <table width: 100%>
+            <table width: 100% >
                 <tr style="height:50px">
-                    <td style="width:70%">                                               
-
-                        <a class="btn btn-secondary" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-secondary" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-secondary" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-secondary" href="login.aspx" role="button">Login Page</a>&nbsp;&nbsp;&nbsp;
-                        <%=forAdmin %>
-                    </td>                   
                     <td style="width: 10%;height:40px">
-                        <img src="images/cinemalogo.png" style="height: 90px; width: 120px;vertical-align:top; float:right"/> 
-                        <br />        
-                             <%=userName %>
+                        <img src="images/cm%20logo.png"" style="height: 40px; width: 130px;vertical-align:top; float:left"/>                            
                     </td>
+                    <td style="width:70%">                                               
+                        <a class="btn btn-warning" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-warning" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-warning" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-warning" href="login.aspx" role="button">Login Page</a>&nbsp;&nbsp;&nbsp;
+                        <%=forAdmin %>
+                    </td>
+                    <td>
+                        <%=userName %>
+                        <%=button %>
+                    </td>
+
+                   <%-- <td >                       
+                          <p style="color:white">  
+                            <a href="#" onclick="alert('hello')" style="color:white"><img style="height:24px;width:30px;vertical-align:middle" src = "images/login%20new%20icon1.jpg"  >
+                            maya</a>
+                         </p>                     
+                    </td>        --%>           
                 </tr>
                 </table>
 

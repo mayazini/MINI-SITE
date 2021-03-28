@@ -52,8 +52,8 @@ C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\bin\roslyn\VBCSCompiler.exe
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.csprojAssemblyReference.cache
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.csproj.CoreCompileInputs.cache
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.csproj.CopyComplete
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.dll
 C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.pdb
+C:\Users\ysmzi\source\repos\MINI SITE\MINI SITE\obj\Debug\MINI SITE.csprojAssemblyReference.cache

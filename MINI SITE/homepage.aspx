@@ -32,13 +32,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="https://www.youtube.com/embed/0pdqf4P9MB8" target="trailer"><img src="images/la%20la%20land.jpg" style="width: 200px; height:100px;float:right"/></a>
+                            <a href="https://www.youtube.com/embed/0pdqf4P9MB8" target="trailer"><img src="images/lala-1%20(1).png" style="width: 200px; height:100px;float:right"/></a>
                               <P style="text-align:left">La La Land &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ***</P>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="https://www.youtube.com/embed/ELeMaP8EPAA" target="trailer"><img src="images/once%20upon%20a%20time%20in%20hollywood.jpg" style="width: 200px; height:100px;float:right"/></a>
+                            <a href="https://www.youtube.com/embed/ELeMaP8EPAA" target="trailer"><img src="images/once%20upon%20a%20time%20in%20hollywood%20img.jfif" style="width: 200px; height:100px;float:right"/></a>
                               <p style="text-align:left">Once Upon A Time In Hollywood   ****</p>
                         </td>
                     </tr>

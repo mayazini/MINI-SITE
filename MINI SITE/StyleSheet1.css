@@ -1,13 +1,20 @@
 ﻿body {
 }
+
+.siteTextColor {
+    color: #ffc107;
+}
 /*login*/
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0 22px 0;
     display: inline-block;
     box-sizing: border-box;
+    border: none;
+    background: #f1f1f1;
 }
+
 
 button {
     background-color: #4CAF50;
@@ -38,17 +45,13 @@ button {
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
+
 }
 
 img.avatar {
-    width: 20%;
-    height: 30%;
+    width: 30%;
+    height: 45%;
     border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-    width: 50%;
 }
 
 
@@ -78,20 +81,13 @@ h2 {
 
 .container {
     padding: 20px;
-    background-color: white;
-    width: 50%;
+    background-color: black;
+    width: 35%;
     height: 100%;
 }
 
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-}
+
 
 
     input[type=text]:focus, input[type=password]:focus {
@@ -105,16 +101,20 @@ hr {
 }
 
 
-.submitbtn {
-    background-color: #4CAF50;
-    color: white;
+/*.submitbtn {
+    background-color: #ffc107;
+    color: black;
     padding: 16px 20px;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
     width: 20%;
-    opacity: 0.9;
-}
+    height: 31px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}*/
 
     .registerbtn:hover {
         opacity: 1;
@@ -152,4 +152,25 @@ h4 {
     box-shadow: 0 9px #999;
 }
 
+.btnForUser {
+    display: inline-block;
+    font-weight: 400;
+    height:32px;
+    width:40px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 12px;
+    line-height: 0.5;
+    border-radius: .25rem;
+    transition: color .15s;
+    background-color:black;
+}
+
+
+
+​
 

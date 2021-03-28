@@ -74,6 +74,7 @@
     <Content Include="images\about page.png" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\cinemalogo.png" />
+    <Content Include="images\cm logo.png" />
     <Content Include="images\gallery page.png" />
     <Content Include="images\home page.png" />
     <Content Include="images\img 1.jpg" />
@@ -83,7 +84,9 @@
     <Content Include="images\interstellar.jpg" />
     <Content Include="images\jojo rabbit.jpg" />
     <Content Include="images\la la land.jpg" />
-    <Content Include="images\LOGIN.png" />
+    <Content Include="images\lala-1 %281%29.png" />
+    <Content Include="images\login new icon1.jpg" />
+    <Content Include="images\once upon a time in hollywood img.jfif" />
     <Content Include="images\once upon a time in hollywood.jpg" />
     <Content Include="images\parasite.jpg" />
     <Content Include="images\the social network.jpeg" />
@@ -99,6 +102,7 @@
     <Content Include="calculatorGet.aspx" />
     <Content Include="AdminManage.aspx" />
     <Content Include="DeleteUser.aspx" />
+    <Content Include="UpdateUser.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,6 +183,13 @@
     </Compile>
     <Compile Include="DeleteUser.aspx.designer.cs">
       <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

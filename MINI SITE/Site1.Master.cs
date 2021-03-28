@@ -11,18 +11,31 @@ namespace MINI_SITE
     {
         public string userName = "";
         public string forAdmin;
+        public string button;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session["login_user"] != null)
             {
-                userName ="HELLO " + this.Session["login_user"].ToString();
+                // if user logs in and whants to log out
+                button= "<button type='submit' class='btn btn-danger' name='logoutbtn'>Logout</button>";
+                if (Request["logoutbtn"] != null)
+                {
+                    this.Session["login_user"] = null;
+                    this.Session["user_isAdmin"] = null;
+                    Response.Redirect("homepage.aspx");
+
+                }
+                //hello user
+                userName = "hello "+ this.Session["login_user"].ToString();
+                //link to admin page only if admin
                 if (Convert.ToBoolean(this.Session["user_isAdmin"]))
                 {
-                    forAdmin = "<a class='btn btn-secondary' href='AdminManage.aspx' role='button'>Admin Page</a>";
+                    forAdmin = "<a class='btn btn-warning' href='AdminManage.aspx' role='button'>Admin Page</a>";
                 }
             }
-           
 
+
+                     
         }
     }
 }
