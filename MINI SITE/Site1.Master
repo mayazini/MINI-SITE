@@ -5,11 +5,36 @@
 <html>
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-       
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Cinema Lovers</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
 </head>
 <body style="background-color:black">
+    <script>/*dropdown menu */
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+//window.onclick = function(event) {
+//  if (!event.target.matches('.dropbtn')) {
+//    var dropdowns = document.getElementsByClassName("dropdown-content");
+//    var i;
+//    for (i = 0; i < dropdowns.length; i++) {
+//      var openDropdown = dropdowns[i];
+//      if (openDropdown.classList.contains('show')) {
+//        openDropdown.classList.remove('show');
+//      }
+//    }
+//  }
+//}
+
+    </script>
+
     <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >   
         <div>
             <table width: 100% >
@@ -25,8 +50,22 @@
                         <%=forAdmin %>
                     </td>
                     <td>
-                        <%=userName %>
-                        <%=button %>
+                        <%--hello user--%>
+                       
+                     <div class="container" <%=makeItInvisible %>>                                    
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Hello  <%=userName  %>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                          <li role="presentation" class="divider"></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                      
                     </td>
 
                    <%-- <td >                       

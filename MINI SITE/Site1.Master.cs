@@ -11,30 +11,21 @@ namespace MINI_SITE
     {
         public string userName = "";
         public string forAdmin;
-        public string button;
+        public string makeItInvisible= "style='display : none'";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session["login_user"] != null)
             {
-                // if user logs in and whants to log out
-                button= "<button type='submit' class='btn btn-danger' name='logoutbtn'>Logout</button>";
-                if (Request["logoutbtn"] != null)
-                {
-                    Session.Abandon();
-                    Response.Redirect("homepage.aspx");
-
-                }
+                //drop down menu if user logs in
+                makeItInvisible = " ";
                 //hello user
-                userName = "hello "+ this.Session["login_user"].ToString();
+                userName =   this.Session["login_user"].ToString();
                 //link to admin page only if admin
                 if (Convert.ToBoolean(this.Session["user_isAdmin"]))
                 {
                     forAdmin = "<a class='btn btn-warning' href='AdminManage.aspx' role='button'>Admin Page</a>";
                 }
             }
-
-
-                     
         }
     }
 }
