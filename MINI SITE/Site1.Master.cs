@@ -19,7 +19,7 @@ namespace MINI_SITE
                 //drop down menu if user logs in
                 makeItInvisible = " ";
                 //hello user
-                userName =   this.Session["login_user"].ToString();
+                userName = "hello " + this.Session["login_user"].ToString();
                 //link to admin page only if admin
                 if (Convert.ToBoolean(this.Session["user_isAdmin"]))
                 {

@@ -84,13 +84,10 @@ h2 {
     background-color: black;
     width: 35%;
     height: 100%;
+    color: white;
 }
 
-
-
-
-
-    input[type=text]:focus, input[type=password]:focus {
+ input[type=text]:focus, input[type=password]:focus {
         background-color: #ddd;
         outline: none;
     }
@@ -116,13 +113,13 @@ hr {
     vertical-align: middle;
 }*/
 
-    .registerbtn:hover {
+.registerbtn:hover {
         opacity: 1;
     }
 
 
 .signin {
-    background-color: #f1f1f1;
+    background-color: black;
     text-align: center;
 }
 
@@ -170,8 +167,22 @@ h4 {
     background-color:black;
 }
 
-/*dropdown menu*/
 
+.btncontainer {
+    width:35px;
+    height: 50px;
+    position: relative;
+}
 
-​
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.text-center {
+    text-align: center !important;
+}
 

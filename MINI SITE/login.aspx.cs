@@ -30,6 +30,7 @@ namespace MINI_SITE
                     if (user != "")
                     {
                         this.Session["login_user"] = userNameForm;
+                        this.Session["login_userPass"] = passwordFrom;
                         if (Convert.ToBoolean(row["admin"]))
                         {
                             this.Session["user_isAdmin"] = true;

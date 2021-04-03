@@ -2,9 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table>
         <tr>
-            <td style="height: 700px;">
+            <td style="height: 700px; color: white">
                  <h4>Dear cinema lovers,</h4>
-                <p style="vertical-align:top; height: 677px; font-size:30px"> 
+                <p style="vertical-align:top; height: 677px; font-size:30px">
+                    
                 This project is meant for us to share our creative ideas.
                 <br />
             

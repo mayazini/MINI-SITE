@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="MINI_SITE.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table style="width:100%;height:100%" >
+    <table style="width:100%;height:100%; color:white" >
         <tr>
              <td style="width:100%; height:100%;vertical-align:top" ><iframe name="trailer" style="width:100%;height:100%" src="https://www.youtube.com/embed/zSWdZVtXT7E"></iframe></td>
             <td style="width:10%;height:10%; text-align:right">

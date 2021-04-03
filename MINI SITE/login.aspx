@@ -8,21 +8,24 @@
      </div>
 
     <label for="uname" ><p class="siteTextColor" >Username</p></label>
-    <input type="text" placeholder="Enter Username" name="uname" required/>
+    <input type="text" placeholder="Enter Username" name="uname" style="color:black" required />
 
     <label for="password" ><p class="siteTextColor">Password</p></label>
-    <input type="password" placeholder="Enter Password" name="password" required/>
+    <input type="password" placeholder="Enter Password" name="password" style="color:black" required/>
         
    <%-- <input name="submitbtn" type="submit" class="submitbtn" value="login" />--%>
       <div class="form-group">
-			<input name="submitbtn" type="submit" value="Login" class="btn float-right login_btn" style="background-color: #ffc107">
+			<input name="submitbtn" type="submit" value="Login" class="btn float-right login_btn" style="background-color: #ffc107; color:black">
       </div>
       <br />
     <%=errorMsg %>
   </div>
 
   <div class="container" style="background-color:black">   
-   <a href="register.aspx">sign up??</a>
+   <a href="register.aspx">sign up</a>
+      <br/>
+   <a href="forgotPass.aspx">forgot password??</a>
+
   </div> 
     <%--/////--%>
 

@@ -164,93 +164,94 @@
 
     </script>
   <div class="container">
-    <h1>Register</h1>
+    <h1 style="color:#ffc107">Register</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
     
     <label for="uname"><b>User Name</b></label>
-    <input  type="text" placeholder="Enter User Name" name="Uname" id="Uname" required/>
+    <input  type="text" placeholder="Enter User Name" name="Uname" id="Uname" style="color:black" required/>
     <label for="uname" id="UnameLabel" style="color:red"></label>
     <label for="uname" id="UnameLabel2" style="color:red"><%=errorMsg %></label>
        <br /><br />
 
     <label for="firstName"><b>Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" required/>
+    <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" style="color:black" required/>
 
     <label for="lastName"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" required/>
+    <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" style="color:black" required/>
 
       <label for="id"><b>Id</b></label>
-      <input type="text" placeholder="Enter Id" name="id" id="id" required />
+      <input type="text" placeholder="Enter Id" name="id" id="id" style="color:black" required />
        <label for="id" id="IdLabel" style="color:red"></label>
        <br /><br />
 
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required />
+      <input type="text" placeholder="Enter Email" name="email" id="email" style="color:black" required />
       <label for="email" id="emailLabel" style="color:red"></label>
        <br /><br />
 
       <label for="instagram"><b>instagram</b></label>
-      <input type="text" placeholder="Enter instagram" name="instagram" id="instagram" required />
+      <input type="text" placeholder="Enter instagram" name="instagram" id="instagram" style="color:black" required />
        <br /><br />
 
       <label for="phone"><b>Phone number</b></label>
-    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required/>
+    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" style="color:black" required/>
         <br /><br />
 
     <label for="Gender"><b>Gender</b></label><br />
     <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label><br>
+    <label for="male" style="color:white">Male</label><br>
     <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label><br>
+    <label for="female" style="color:white">Female</label><br>
     <input type="radio" id="other" name="gender" value="other">
-    <label for="other">Other</label>
+    <label for="other" style="color:white">Other</label>
 
     <br /><br />
   
       <label for="age"><b>age</b></label>
-    <input type="text" placeholder="Enter age" id="age" name="age"/>
+    <input type="text" placeholder="Enter age" id="age" name="age" style="color:black"/>
 
       <br /><br />
     <label for="interest"><b>Area of interest</b></label><br />
     <input type="checkbox" id="int1" name="int1" value="Bike" />
-    <label for="int1"> I like biking</label><br>
+    <label for="int1" style="color:white"> I like biking</label><br>
     <input type="checkbox" id="int2" name="int2" value="Car" />
-    <label for="int2"> I like driving</label><br>
+    <label for="int2" style="color:white"> I like driving</label><br>
       <br /><br />
 
     <label for="address"><b>Address</b></label><br /><br />
-    <textarea placeholder="Enter address" name="address" id="address" required rows="3"></textarea>
+    <textarea placeholder="Enter address" name="address" id="address" required rows="3" style="color:black"></textarea>
         <br /><br />
 
       <label for="music"><b>Genres of music</b></label><br />
     <input type="checkbox" id="mus1" name="mus1" value="Rock" />
-    <label for="mus1"> Rock music</label><br>
+    <label for="mus1"style="color:white"> Rock music</label><br>
     <input type="checkbox" id="mus2" name="mus2" value="Clasical"/>
-    <label for="mus2"> Clasical music</label><br /><br />
+    <label for="mus2" style="color:white"> Clasical music</label><br /><br />
 
       <label for="feeling"><b>I'm feeling</b></label><br />
-    <select name="feeling" id="feeling">
+    <select name="feeling" id="feeling" style="color:black">
         <option>good</option>
         <option>bad</option>
     </select>
       <br /><br />
 
     <label for="psw"><b>Password</b></label>
-    <input type="text" placeholder="Enter Password" name="password" id="password" required>
+    <input type="text" placeholder="Enter Password" name="password" id="password" style="color:black" required>
        <label for="psw" id="passwordLabel" style="color:red"></label>
        <br /><br />
 
     <label for="verifypsw"><b>Verify Password</b></label>
-    <input type="text" placeholder="Verify password" name="verifypsw" id="verifypsw" required/>    
+    <input type="text" placeholder="Verify password" name="verifypsw" id="verifypsw" style="color:black" required/>    
         <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
        <br /><br />
       <hr>
-     <input type="submit" class="submitbtn" value="Register" onsubmit="return checkForm()"/>
+     <input type="submit" class="btn float-right" style="background-color:#ffc107; color:black" value="Register" onsubmit="return checkForm()"/>
       <asp:Literal ID="registerError" runat="server"></asp:Literal>
   </div>
   <div class="container signin">
-      <button type="reset" class="cancelbtn" >Cancel</button><br />
-      <p>Already have an account? <a href="login.aspx">Sign in</a>.</p>      
+      <button type="reset" class="cancelbtn" >Cancel</button>
+      <br />     
+      <p>Already have an account? <a href="login.aspx">Sign in</a></p>     
   </div>   
 </asp:Content>

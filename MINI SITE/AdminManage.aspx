@@ -17,12 +17,16 @@
             </td>
             <td>
                 <div class="form-outline">
-                <input type="search" id="search3" class="form-control" placeholder="Last Name" name="lastName"
-                 aria-label="Search" />
+                <input type="search" id="search3" class="form-control" placeholder="Last Name" name="lastName"aria-label="Search" />
                  </div>
             </td>
-            <td>
-                <button type="submit" class="btn btn-outline-primary" name="searchbtn">search</button>
+            <td >
+                <div class="btncontainer">
+                  <div class="vertical-center">
+                     <button type="submit" class="btn btn-outline-primary" name="searchbtn" > search </button>
+                  </div>
+                </div>
+               
             </td>
         </tr>
 

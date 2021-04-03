@@ -105,6 +105,8 @@
     <Content Include="UpdateUser.aspx" />
     <Content Include="testing.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="updatePass.aspx" />
+    <Content Include="forgotPass.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,6 +208,20 @@
     </Compile>
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatePass.aspx.cs">
+      <DependentUpon>updatePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatePass.aspx.designer.cs">
+      <DependentUpon>updatePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPass.aspx.cs">
+      <DependentUpon>forgotPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotPass.aspx.designer.cs">
+      <DependentUpon>forgotPass.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
