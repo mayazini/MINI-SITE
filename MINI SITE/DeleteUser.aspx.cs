@@ -23,7 +23,7 @@ namespace MINI_SITE
         {
             if (!Convert.ToBoolean(this.Session["user_isAdmin"]))
             {
-                msg = "this page is for admin only, will redirect to home page";
+                msg = "This page is for admin only, will redirect to home page";
                 makeTableInvisible = "style='display : none'";
                 redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 5000);";
             }

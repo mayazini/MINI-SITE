@@ -11,34 +11,40 @@
 <title>Cinema Lovers</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
 </head>
-<body style="background-color:black">
+<body style="background-color:#3e6182">
 
-    <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >          
+    <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >         
             <table width: 100% >
                 <tr style="height:60px; text-align:center">
-                    <td style="width: 10%;height:40px">
-                        <img src="images/cm%20logo.png"" style="height: 40px; width: 130px;vertical-align:top; float:left"/>                            
+                    <td style="width: 30%;height:40px; text-align:left;">
+                        <%--<img src="images/cm%20logo.png"" style="height: 40px; width: 130px;vertical-align:top; float:left"/>   --%>
+                        <h1 style="vertical-align:top">Cinema Lovers </h1>
                     </td>
-                    <td style="width:70%">                                               
-                        <a class="btn btn-warning" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-warning" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-warning" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-warning" href="login.aspx" role="button">Login Page</a>&nbsp;&nbsp;&nbsp;
-                        <%=forAdmin %>
+                    <td style="width:70%; ">   
+                        <ul class="nav nav-pills" style="text-align:center">
+                            <li><a class="btn btn-warning" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li><a class="btn btn-warning" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li><a class="btn btn-warning" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li><a class="btn btn-warning" href="login.aspx" role="button">Login Page</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li><a class="btn btn-warning" href="Projects.aspx" role="button">Projects Page</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li><%=forAdmin %></li>
+                        </ul>                                 
                     </td>
                     <td>
-                      <div class="dropdown" <%=makeItInvisible %> style="width:150px">
-                       <button class="btn btn-secondary" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
+                      <div class="dropdown" <%=makeItInvisible %> style="width:170px; height:75px">
+                       <button class="btn btn-warning" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                           <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
                           <li role="presentation"><a role="menuitem" tabindex="-1" href="updatePass.aspx">update pass</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">notDoneYet</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="createProject.aspx">create new projects</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="sendMsg.aspx">send a message</a></li>                         
                           <li role="presentation" class="divider"></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="about.aspx">About Us</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="inbox.aspx">my inbox</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="myProjects.aspx">my projects</a></li>
                         </ul>
                       </div>                      
-                    </td>      
+                          </td>
                 </tr>
                 </table>
 
@@ -53,7 +59,8 @@
             <footer >
                 <h2 style="text-align:right; color:blue;font-size:10px">כל זכויות שמורות למאיה זיני</h2>
             </footer>
-        </div>
+ </div>
+       
         </form>
 </body>
 </html>

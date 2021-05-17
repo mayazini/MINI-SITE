@@ -101,11 +101,13 @@
                 <input type="password"  class="form-control" placeholder="Confirm Password" id="verifypsw" name="verifypsw"> 
                  <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
             </div> 
+            <div>
+                <input type="submit" name="submitbtn" class="btn btn-warning" onsubmit ="return checkForm()" value="update pass"/>
+                <b style="color:white"><%=msg %></b>
+            </div>
             
 		</div>  
 	</div>
 </div>
-    <%--<button type="submit" name="submitbtn" class="btn btn-outline-primary" onsubmit ="return checkForm()">update pass</button>--%>
-    <input type="submit" name="submitbtn" class="btn btn-outline-primary" onsubmit ="return checkForm()" value="update pass"/>
-    <b style="color:white"><%=msg %></b>
+
 </asp:Content>

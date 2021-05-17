@@ -14,8 +14,6 @@ namespace MINI_SITE
         protected void Page_Load(object sender, EventArgs e)
         {
             String uname = Request["uname"];
-
-
             if (uname != null)
             {
                 string userNamedb = SQLHelper.SelectScalarToString("select username from users where username=N'" + uname + "'");
@@ -28,8 +26,9 @@ namespace MINI_SITE
                     string fName = Request["firstName"];
                     string lName = Request["lastName"];
                     string pass = Request["password"];
+                    string skill = Request["skill"];
                     string id = Request["id"];
-                    SQLHelper.DoQuery("insert into users (userName, firstName, lastName, password, id, admin) values (N'" + uname + "',N'" + fName + "',N'" + lName + "',N'" + pass + "','" + id + "','false')");
+                    SQLHelper.DoQuery("insert into users (userName, firstName, lastName, password, id, skill, admin) values (N'" + uname + "',N'" + fName + "',N'" + lName + "',N'" + pass + "','" + id + "', '"+ skill + "', 'false')");
                     Response.Redirect("Login.aspx");
                 }
             }

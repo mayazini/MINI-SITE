@@ -90,6 +90,12 @@
     <Content Include="images\once upon a time in hollywood.jpg" />
     <Content Include="images\parasite.jpg" />
     <Content Include="images\the social network.jpeg" />
+    <Content Include="inbox.aspx" />
+    <Content Include="jobOffers.aspx" />
+    <Content Include="myProjects.aspx" />
+    <Content Include="applicantResume.aspx" />
+    <Content Include="seeMore.aspx" />
+    <Content Include="sendMsg.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="homepage.aspx" />
@@ -107,9 +113,54 @@
     <Content Include="logout.aspx" />
     <Content Include="updatePass.aspx" />
     <Content Include="forgotPass.aspx" />
+    <Content Include="createProject.aspx" />
+    <Content Include="Projects.aspx" />
+    <Content Include="AboutProject.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="inbox.aspx.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inbox.aspx.designer.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jobOffers.aspx.cs">
+      <DependentUpon>jobOffers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jobOffers.aspx.designer.cs">
+      <DependentUpon>jobOffers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myProjects.aspx.cs">
+      <DependentUpon>myProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myProjects.aspx.designer.cs">
+      <DependentUpon>myProjects.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="applicantResume.aspx.cs">
+      <DependentUpon>applicantResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="applicantResume.aspx.designer.cs">
+      <DependentUpon>applicantResume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeMore.aspx.cs">
+      <DependentUpon>seeMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeMore.aspx.designer.cs">
+      <DependentUpon>seeMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sendMsg.aspx.cs">
+      <DependentUpon>sendMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sendMsg.aspx.designer.cs">
+      <DependentUpon>sendMsg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,6 +273,27 @@
     </Compile>
     <Compile Include="forgotPass.aspx.designer.cs">
       <DependentUpon>forgotPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createProject.aspx.cs">
+      <DependentUpon>createProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="createProject.aspx.designer.cs">
+      <DependentUpon>createProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutProject.aspx.cs">
+      <DependentUpon>AboutProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutProject.aspx.designer.cs">
+      <DependentUpon>AboutProject.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

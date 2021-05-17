@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="gallery.aspx.cs" Inherits="MINI_SITE.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<style>
-   
-</style>
-    <table>
+
+<div <%=makeTableInvisible %>>
+    <table >
         <tr>
             <td style="text-align:left;vertical-align:top">
                <a href="#interstellar"><img src="images/interstellar.jpg"style="width: 400px;height:300px"/></a>   
@@ -74,4 +73,6 @@
             </td>  
         </tr>
     </table>
+    </div>
+    <p style="color:white"><%=msg %></p>
 </asp:Content>

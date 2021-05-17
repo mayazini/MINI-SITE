@@ -14,17 +14,7 @@ namespace MINI_SITE
         public string myName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //1
-            myDate = DateTime.Now.ToString();
-            //2
-            for(int i = 1; i <=100; i++)
-            {
-                if (i % 3 == 0)
-                {
-                    devidedByThree += i + " ";
-                }
-            }
-            //3
+          
             
         }
     }

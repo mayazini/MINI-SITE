@@ -190,8 +190,8 @@
       <label for="email" id="emailLabel" style="color:red"></label>
        <br /><br />
 
-      <label for="instagram"><b>instagram</b></label>
-      <input type="text" placeholder="Enter instagram" name="instagram" id="instagram" style="color:black" required />
+      <label for="skill"><b>skill</b></label>
+      <input type="text" placeholder="Enter skill" name="skill" id="skill" style="color:black" required />
        <br /><br />
 
       <label for="phone"><b>Phone number</b></label>
