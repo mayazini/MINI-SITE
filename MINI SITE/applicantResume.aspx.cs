@@ -12,6 +12,7 @@ namespace MINI_SITE
     {
         public string usersList;
         public string username="";
+        public string projectName="";
         private void BuildTable(string sql)
         {
             DataTable dt = SQLHelper.SelectData(sql);
@@ -47,6 +48,7 @@ namespace MINI_SITE
         protected void Page_Load(object sender, EventArgs e)
         {
             string userName = Request.QueryString["queryUsername"];
+            projectName = Request.QueryString["projectName"];           
             username = userName;
             BuildTable("select userName, firstName, lastName, email, age from users where userName = N'"+userName+"'");
  

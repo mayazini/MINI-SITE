@@ -5,4 +5,5 @@
     <h1>to: you</h1>
     <hr />
     <h1>message: <%=message %></h1>
+    <a href="sendMsg.aspx?recieverName=<%=from %>" class="btn btn-danger">Reply</a>
 </asp:Content>

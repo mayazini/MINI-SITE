@@ -41,7 +41,7 @@ namespace MINI_SITE
         {
             if (Session["login_user"] != null)
             {
-                BuildTable("select Subject,Id from Inbox where reciever= '" + Session["login_user"]+"'");
+                BuildTable("select Subject,Id from Inbox where reciever= N'" + Session["login_user"]+"'");
             }
             else
             {

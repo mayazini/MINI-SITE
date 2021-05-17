@@ -14,6 +14,8 @@ namespace MINI_SITE
         public string message="";
         public string alert="";
         public string redirectJs = "";
+        public string subject = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["login_user"] != null)
@@ -22,6 +24,7 @@ namespace MINI_SITE
                 from = Session["login_user"].ToString();
                 if (Request.QueryString["recieverName"] != null && Request.QueryString["recieverName"] != "")
                 {
+                    subject = Request.QueryString["projectName"];
                     reciever = Request.QueryString["recieverName"];
                     if (Request.QueryString["isApproved"] == "true")
                     {
@@ -31,7 +34,7 @@ namespace MINI_SITE
 
                 if (Request["submitbtn"] != null)
                 {
-                    msg=SQLHelper.DoQuery("insert into Inbox (sender,reciever,message,Subject) values ('"+Request["fName"]+"', '"+Request["tName"]+"', '"+ Request["message"] + "' , '"+ Request["subject"] + "')");
+                    msg = SQLHelper.DoQuery("insert into Inbox (sender,reciever,message,Subject) values (N'"+Request["fName"]+"', N'"+Request["tName"]+"', N'"+ Request["message"] + "' , N'"+ Request["subject"] + "')");
                 }
 
                 if (msg > 0)

@@ -40,7 +40,7 @@ namespace MINI_SITE
                 }
 
                 usersList += "<td>";
-                usersList += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] +"'>More Info</a>";
+                usersList += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] +"&projectName=" + dt.Rows[i]["projectName"] + "'>More Info</a>";
                 usersList += "</td>";
                 usersList += "<td>";
 
@@ -53,7 +53,7 @@ namespace MINI_SITE
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BuildTable("select userName,isApproved,projectName,userSkill from jobOffers where projectId = '"+Request.QueryString["projectId"] + "'");
+            BuildTable("select userName,isApproved,projectName,userSkill from jobOffers where projectId = N'"+Request.QueryString["projectId"] + "'");
         }
     }
 }

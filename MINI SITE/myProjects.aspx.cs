@@ -30,7 +30,7 @@ namespace MINI_SITE
                 usersList += "<div class='card' style='width: 22rem; height: auto; background-color: #313131'><h1 class='card-title' style='color:#ffc107;text-align:center'>" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 style='color:#ffc107'>" + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text' style='color:#ffc107'>" + dt.Rows[i]["projectDescription"] + "</p> <a href = 'jobOffers.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId= "+ dt.Rows[i]["Id"] + "' class='btn ' style= 'background-color:#eff4f8; color:#313131'>See who would like to join</a></div>";
                 usersList += "</td>";
 
-                if (counter == 2)
+                if (counter == 3)
                 {
                     counter = -1;
                     usersList += "</tr> <tr style = 'height: 100px'></tr>";
@@ -60,7 +60,7 @@ namespace MINI_SITE
             }
             else
             {
-                BuildTable("select * from projects where nameCreator = '" + Session["login_user"] + "'");
+                BuildTable("select * from projects where nameCreator = N'" + Session["login_user"] + "'");
             }
             
         }
