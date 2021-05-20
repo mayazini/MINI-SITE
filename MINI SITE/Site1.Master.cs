@@ -23,7 +23,7 @@ namespace MINI_SITE
                 //link to admin page only if admin
                 if (Convert.ToBoolean(this.Session["user_isAdmin"]))
                 {
-                    forAdmin = "<a class='btn btn-warning' href='AdminManage.aspx' role='button'>Admin Page</a>";
+                    forAdmin = "<a class='btn btn-type1 type1-colorText' href='AdminManage.aspx' role='button'>Admin Page</a>";
                 }
             }
         }

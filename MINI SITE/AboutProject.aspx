@@ -17,7 +17,7 @@
             </tr>
         </tbody>
         <tfoot style="border:none">
-            <tr><td><input type="submit" name="submitbtn" value="apply" class="btn btn-warning"/></td></tr>
+            <tr><td><input type="submit" name="submitbtn" value="apply" class="btn btn-type2 type2-colorText"/></td></tr>
             <tr style="color:white"><%=msg %></tr>
         </tfoot>
     </table>

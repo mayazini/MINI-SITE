@@ -103,13 +103,9 @@
     <Content Include="gallery.aspx" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
-    <Content Include="testing java.aspx" />
-    <Content Include="dotnet.aspx" />
-    <Content Include="calculatorGet.aspx" />
     <Content Include="AdminManage.aspx" />
     <Content Include="DeleteUser.aspx" />
     <Content Include="UpdateUser.aspx" />
-    <Content Include="testing.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="updatePass.aspx" />
     <Content Include="forgotPass.aspx" />
@@ -204,27 +200,6 @@
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="SQLHelper.cs" />
-    <Compile Include="testing java.aspx.cs">
-      <DependentUpon>testing java.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testing java.aspx.designer.cs">
-      <DependentUpon>testing java.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dotnet.aspx.cs">
-      <DependentUpon>dotnet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dotnet.aspx.designer.cs">
-      <DependentUpon>dotnet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="calculatorGet.aspx.cs">
-      <DependentUpon>calculatorGet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="calculatorGet.aspx.designer.cs">
-      <DependentUpon>calculatorGet.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdminManage.aspx.cs">
       <DependentUpon>AdminManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,13 +220,6 @@
     </Compile>
     <Compile Include="UpdateUser.aspx.designer.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testing.aspx.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testing.aspx.designer.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
     </Compile>
     <Compile Include="logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>

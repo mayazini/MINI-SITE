@@ -11,7 +11,7 @@
 <title>Cinema Lovers</title>
     <link href="StyleSheet1.css" rel="stylesheet" />
 </head>
-<body style="background-color:#3e6182">
+<body class="siteBackgroundColor">
 
     <form id="form1" runat="server"  name="myform"  method="post" onsubmit="return checkForm()" >         
             <table width: 100% >
@@ -22,29 +22,28 @@
                     </td>
                     <td style="width:70%; ">   
                         <ul class="nav nav-pills" style="text-align:center">
-                            <li><a class="btn btn-warning" href="homepage.aspx" role="button">Home Page</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li><a class="btn btn-warning" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li><a class="btn btn-warning" href="gallery.aspx" role="button">Gallery Page</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li><a class="btn btn-warning" href="login.aspx" role="button">Login Page</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li><a class="btn btn-warning" href="Projects.aspx" role="button">Projects Page</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li><%=forAdmin %></li>
+                            <li class="menu"><a class="btn btn-type1 type1-colorText" href="homepage.aspx" role="button">Home</a>&nbsp;&nbsp;&nbsp;</li>
+                           <%-- <li><a class="btn btn-type1 type1-colorText" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;</li>--%>
+                            <li class="menu"><a class="btn btn-type1 type1-colorText" href="gallery.aspx" role="button">Gallery</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li class="menu"><a class="btn btn-type1 type1-colorText" href="login.aspx" role="button">Login</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li class="menu"><a class="btn btn-type1 type1-colorText" href="Projects.aspx" role="button">Projects</a>&nbsp;&nbsp;&nbsp;</li>
+                            <li class="menu"><%=forAdmin %></li>
+                            <li> <div class="dropdown menu" <%=makeItInvisible %> style="width:150px; height:55px">
+                           <button class="btn btn-type1 type1-colorText" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="menu1" >
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="updatePass.aspx">update pass</a></li>
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="createProject.aspx">create new projects</a></li>
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="sendMsg.aspx">send a message</a></li>                         
+                              <li role="presentation" class="divider"></li>
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="inbox.aspx">my inbox</a></li>
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="myProjects.aspx">my projects</a></li>
+                            </ul>
+                          </div>       
+                          </li>
                         </ul>                                 
                     </td>
-                    <td>
-                      <div class="dropdown" <%=makeItInvisible %> style="width:170px; height:75px">
-                       <button class="btn btn-warning" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="updatePass.aspx">update pass</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="createProject.aspx">create new projects</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="sendMsg.aspx">send a message</a></li>                         
-                          <li role="presentation" class="divider"></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1" href="inbox.aspx">my inbox</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="myProjects.aspx">my projects</a></li>
-                        </ul>
-                      </div>                      
-                          </td>
                 </tr>
                 </table>
 
@@ -55,12 +54,80 @@
                           </asp:ContentPlaceHolder>
                     </td>
                 </tr>
-            </table>  
-            <footer >
-                <h2 style="text-align:right; color:blue;font-size:10px">כל זכויות שמורות למאיה זיני</h2>
-            </footer>
+                <tr style="height:200px"></tr>
+            </table>
+        
+
+<footer class="page-footer font-small siteTextColor footerBackgroundColor pt-4">
+
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+
+      
+      <hr class="clearfix w-100 d-md-none pb-4">
+      <div class="col-md-3 mb-md-0 mb-3">
+        <h5 class="text-uppercase title-color" >Contact Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>Maya Zini</p>
+          </li>
+          <li>
+            <p>instegram: im_mayazini</p>
+          </li>
+          <li>
+            <p>facebook:for old people</p>
+          </li>
+          <li>
+            <p>youtube: a secret</p>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-md-2 mb-md-0 mb-3">
+
+        <h5 class="text-uppercase title-color">Useful Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="homepage.aspx" class="siteTextColor">> home</a>
+          </li>
+          <li>
+            <a href="about.aspx" class="siteTextColor">> about</a>
+          </li>
+          <li>
+            <a href="Projects.aspx" class="siteTextColor">> projects</a>
+          </li>
+          <li>
+            <a href="login.aspx" class="siteTextColor" >> login</a>
+          </li>
+        </ul>
+
+      </div>
+        <div class="col-md-3 mt-md-0 mb-3">
+
+        <h5 class="text-uppercase title-color">Fun Fact!</h5>
+        <p>All of the colors in the website <br />are from the movie Interstellar</p>
+      </div>
+        
+     <div class="col-md-4 mt-md-0 mb-3">
+
+        <h5 class="text-uppercase title-color">About Cinema Lovers</h5>
+        <p>We hope that people from all over the world can connect through </p>
+        <p>their love to cinema and film making</p>
+        <p>currently we have x happy users from all over the world</p>
+        <p>Join today and be apart of a very special community!</p>
+
+    </div>
+  
+  </div>
  </div>
-       
-        </form>
+
+
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://youtu.be/dQw4w9WgXcQ"> maya.com</a>
+  </div>
+</footer>
+  </form>
 </body>
 </html>

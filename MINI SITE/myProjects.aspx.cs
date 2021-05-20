@@ -27,7 +27,7 @@ namespace MINI_SITE
                 }
 
                 usersList += "<td>";
-                usersList += "<div class='card' style='width: 22rem; height: auto; background-color: #313131'><h1 class='card-title' style='color:#ffc107;text-align:center'>" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 style='color:#ffc107'>" + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text' style='color:#ffc107'>" + dt.Rows[i]["projectDescription"] + "</p> <a href = 'jobOffers.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId= "+ dt.Rows[i]["Id"] + "' class='btn ' style= 'background-color:#eff4f8; color:#313131'>See who would like to join</a></div>";
+                usersList += "<div class='card card-backgroundcolor' style='width: 22rem; height: auto'><h1 class='card-title-TextColor' >" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 class='card-TextColor'>by: " + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text card-TextColor'>description: " + dt.Rows[i]["projectDescription"] + "</p> <a href = 'jobOffers.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId= "+ dt.Rows[i]["Id"] + "' class='btn btn-card card-btn-TextColor' >See who would like to join</a></div>";
                 usersList += "</td>";
 
                 if (counter == 3)
@@ -47,7 +47,7 @@ namespace MINI_SITE
             usersList += "<tr style = 'height: 50px'></tr>";
             usersList += "<tr> <td style='width:50px'></td>";
             usersList += "<td>";
-            usersList += "<a href =' createProject.aspx' class='btn ' style= 'width:300px; height:50px; background-color:#ffc107;font-size: 20px;color:black'>create new project</a>";
+            usersList += "<a href =' createProject.aspx' class='btn btn-type1' style= 'width:300px; height:50px; background-color:#ffc107;font-size: 20px;color:black'>create new project</a>";
             usersList += "</td>";
             usersList += "</tr>";
             usersList += "</table>";

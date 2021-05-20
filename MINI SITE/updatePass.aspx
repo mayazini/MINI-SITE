@@ -102,7 +102,7 @@
                  <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
             </div> 
             <div>
-                <input type="submit" name="submitbtn" class="btn btn-warning" onsubmit ="return checkForm()" value="update pass"/>
+                <input type="submit" name="submitbtn" class="btn btn-type2 type2-colorText" onsubmit ="return checkForm()" value="update pass"/>
                 <b style="color:white"><%=msg %></b>
             </div>
             

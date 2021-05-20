@@ -164,8 +164,8 @@
 
     </script>
   <div class="container">
-    <h1 style="color:#ffc107">Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1 class="title-color" >Register</h1>
+    <p class="siteTextColor">Please fill in this form to create an account.</p>
     <hr>
     
     <label for="uname"><b>User Name</b></label>
@@ -246,10 +246,10 @@
         <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
        <br /><br />
       <hr>
-     <input type="submit" class="btn float-right" style="background-color:#ffc107; color:black" value="Register" onsubmit="return checkForm()"/>
+     <input type="submit" class="btn float-right btn-type2 type2-colorText"  value="Register" onsubmit="return checkForm()"/>
       <asp:Literal ID="registerError" runat="server"></asp:Literal>
   </div>
-  <div class="container signin">
+  <div class="container signin" style="background-color:#02121e"><%--////--%>
       <button type="reset" class="cancelbtn" >Cancel</button>
       <br />     
       <p>Already have an account? <a href="login.aspx">Sign in</a></p>     

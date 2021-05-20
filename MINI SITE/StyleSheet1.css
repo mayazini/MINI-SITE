@@ -1,8 +1,75 @@
 ﻿body {
 }
-
+/*general colors*/
 .siteTextColor {
-    color: #ffc107;
+    color: #fffdf1;
+}
+.siteBackgroundColor {
+    background-color:  #f9b580;
+}
+.btn-type1 {
+    background-color: #223c44;
+}
+
+.btn-type2 {
+    background-color: #f9b580;
+}
+
+.title-color {
+    color: #f9b580;
+}
+
+
+.container {
+    padding: 20px;
+    background-color: #223c44;
+    width: 35%;
+    height: 100%;
+    color: white;
+}
+
+.type1-colorText {
+    color: #fffdf1;
+}
+
+.type2-colorText {
+    color: #02121e;
+}
+/*card*/
+.card-backgroundcolor {
+    background-color: #02121e;
+}
+
+.btn-card {
+    background-color: #fffdf1;
+}
+
+.card-TextColor {
+    color:  #fdf3cc;
+    text-align: center
+}
+
+.card-btn-TextColor {
+    color: #02121e;
+}
+
+.card-title-TextColor {
+    color: #f9b580;
+    text-align: center
+}
+
+/*footer*/
+.footerBackgroundColor {
+    background-color: #02121e;
+
+}
+
+
+
+/*page menu*/
+.menu{
+    width:150px;
+    height:100px;
 }
 /*login*/
 input[type=text], input[type=password] {
@@ -79,13 +146,7 @@ h2 {
 
 /*///*/
 
-.container {
-    padding: 20px;
-    background-color: black;
-    width: 35%;
-    height: 100%;
-    color: white;
-}
+
 
  input[type=text]:focus, input[type=password]:focus {
         background-color: #ddd;

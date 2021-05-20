@@ -15,13 +15,13 @@
         
    <%-- <input name="submitbtn" type="submit" class="submitbtn" value="login" />--%>
       <div class="form-group">
-			<input name="submitbtn" type="submit" value="Login" class="btn float-right login_btn" style="background-color: #ffc107; color:black">
+			<input name="submitbtn" type="submit" value="Login" class="btn float-right login_btn btn-type2 type2-colorText" >
       </div>
       <br />
     <%=errorMsg %>
   </div>
 
-  <div class="container" style="background-color:black">   
+  <div class="container" style="background-color:#02121e"> <%--////  --%>
    <a href="register.aspx">sign up</a>
       <br/>
    <a href="forgotPass.aspx">forgot password??</a>
