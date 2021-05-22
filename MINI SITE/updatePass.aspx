@@ -84,9 +84,8 @@
     </script>
        
      <div class="container">
-	<div class="row">
-		<div >
-		    
+	
+		<div >   
 		    <label class="siteTextColor">Current Password</label>
 		    <div class="form-group pass_show"> 
                 <input type="password"  class="form-control" value="<%=userPass %>" placeholder="<%=userPass %>">
@@ -101,13 +100,13 @@
                 <input type="password"  class="form-control" placeholder="Confirm Password" id="verifypsw" name="verifypsw"> 
                  <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
             </div> 
-            <div>
-                <input type="submit" name="submitbtn" class="btn btn-type2 type2-colorText" onsubmit ="return checkForm()" value="update pass"/>
+            <div style="width:auto">
+                <input type="submit" name="submitbtn" style="width:auto" class="btn btn-type2 type2-colorText center" onsubmit ="return checkForm()" value="update pass"/>
                 <b style="color:white"><%=msg %></b>
             </div>
             
 		</div>  
 	</div>
-</div>
+
 
 </asp:Content>

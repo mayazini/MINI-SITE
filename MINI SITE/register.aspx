@@ -163,8 +163,8 @@
 
 
     </script>
-  <div class="container">
-    <h1 class="title-color" >Register</h1>
+  <div class="container ">
+    <h1 class="title-color">Register</h1>
     <p class="siteTextColor">Please fill in this form to create an account.</p>
     <hr>
     
@@ -249,9 +249,9 @@
      <input type="submit" class="btn float-right btn-type2 type2-colorText"  value="Register" onsubmit="return checkForm()"/>
       <asp:Literal ID="registerError" runat="server"></asp:Literal>
   </div>
-  <div class="container signin" style="background-color:#02121e"><%--////--%>
+  <div class="container signin " style="background-color:#225e62"><%--////--%>
       <button type="reset" class="cancelbtn" >Cancel</button>
       <br />     
-      <p>Already have an account? <a href="login.aspx">Sign in</a></p>     
+      <p class="footerTextColor">Already have an account? <a href="login.aspx" class="footerTitleColor">Sign in</a></p>     
   </div>   
 </asp:Content>

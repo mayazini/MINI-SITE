@@ -21,10 +21,10 @@
     <%=errorMsg %>
   </div>
 
-  <div class="container" style="background-color:#02121e"> <%--////  --%>
-   <a href="register.aspx">sign up</a>
+  <div class="container footerBackgroundColor" > <%--////  --%>
+   <a href="register.aspx" class="footerTitleColor" >sign up</a>
       <br/>
-   <a href="forgotPass.aspx">forgot password??</a>
+   <a href="forgotPass.aspx" class="footerTitleColor">forgot password??</a>
 
   </div> 
     <%--/////--%>

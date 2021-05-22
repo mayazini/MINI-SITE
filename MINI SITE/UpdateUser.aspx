@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td colspan="3" style="text-align: left">
-                <button type="submit" name="submitbtn" class="btn btn-outline-primary">update</button>
+                <button type="submit" name="submitbtn" class="btn btn-type1">update</button>
             </td>
         </tr>
     </table>

@@ -1,24 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AboutProject.aspx.cs" Inherits="MINI_SITE.WebForm18" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th scope="col">name of Creator</th>
-                <th scope="col">project Description</th>
-                <th scope="col">project Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr style="color:white">
-                <td><%=nameCreator %></td>
-                <td><%=projectDescription %></td>
-                <td><%=projectName %></td>
-            </tr>
-        </tbody>
-        <tfoot style="border:none">
-            <tr><td><input type="submit" name="submitbtn" value="apply" class="btn btn-type2 type2-colorText"/></td></tr>
-            <tr style="color:white"><%=msg %></tr>
-        </tfoot>
-    </table>
+    <div class="container siteTextColor" style="font-size:30px; height:auto;width:auto">
+        <h1 class="title-color">project Name: </h1> <%=projectName %>
+        <h1 class="title-color">name of Creator:</h1> <%=nameCreator %>
+        <hr />
+        <h1 class="title-color">project Description: </h1>
+       <%=projectDescription %>
+        <h1 class="title-color">project story: </h1>
+       <%=about %>
+        <br />
+        <input type="submit" name="submitbtn" value="apply" class="btn btn-type2 type2-colorText"/>
+        <br />
+        <p style="color:black"><%=msg %></p> 
+    </div>
+
 </asp:Content>

@@ -14,7 +14,7 @@ namespace MINI_SITE
         private void BuildTable(string sql)
         {
             DataTable dt = SQLHelper.SelectData(sql);
-            usersList += "<table class='table table-dark'>";
+            usersList += "<table class='myTable '>";
             usersList += "<thead>";
             usersList += "<tr>";
             usersList += "<th scope = 'col'>  </th>";
@@ -26,11 +26,11 @@ namespace MINI_SITE
             {
                 usersList += "<tr>";
                 usersList += "<td>" + i + "</td>";
-                usersList += "<td style='width:10%'>";
+                usersList += "<td style='width:20%'>";
                 usersList += dt.Rows[i]["Subject"];
                 usersList += "</td>";
-                usersList += "<td style='width:80%'> </td>";
-                usersList += "<td style='width:10%'>";
+                usersList += "<td style='width:40%'> </td>";
+                usersList += "<td style='width:20%'>";
                 usersList += "<a href= 'seeMore.aspx?Id= " + dt.Rows[i]["Id"] + "'>see more</a>";
                 usersList += "</td>";
                 usersList += "</tr>";

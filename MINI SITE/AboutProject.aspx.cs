@@ -15,6 +15,7 @@ namespace MINI_SITE
         public string projectName;
         public string msg;
         public string projectId;
+        public string about;
         protected void Page_Load(object sender, EventArgs e)
         {
             projectName = Request.QueryString["queryProjectname"];
@@ -22,13 +23,14 @@ namespace MINI_SITE
             if (projectName != null && projectName != "")
             {
                 DataRow row;
-                DataTable dt = SQLHelper.SelectData(string.Format("select nameCreator, projectDescription from Projects where id = N'{0}'", projectId));
+                DataTable dt = SQLHelper.SelectData(string.Format("select nameCreator, projectDescription,about from Projects where id = N'{0}'", projectId));
                 int rows = dt.Rows.Count;// fix the row text dt.rows.count - doesnt work
                 if (rows >= 1)
                 {
                     row = dt.Rows[0];
                     nameCreator = row["nameCreator"].ToString();
                     projectDescription = row["projectDescription"].ToString();
+                    about= row["about"].ToString();
 
                 }
                 if (Request["submitbtn"] != null)
@@ -38,6 +40,10 @@ namespace MINI_SITE
                         string userName = Session["login_user"].ToString();// keep the skill in session
                         string skill = SQLHelper.SelectScalarToString("select skill from users where userName = N'" + userName + "'");
                         int a = SQLHelper.DoQuery("insert into JobOffers (userName, userSkill, projectName,projectId, isApproved) values ('" + userName + "', '" + skill + "', '" + projectName + "', '"+projectId+"', 'false')");
+                        if (a > 0)
+                        {
+                            msg = "application sent";
+                        }
                         Session["userSkill"] = skill;
 
                     }

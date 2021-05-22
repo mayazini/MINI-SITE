@@ -23,7 +23,7 @@
             <td >
                 <div class="btncontainer">
                   <div class="vertical-center">
-                     <button type="submit" class="btn btn-outline-primary" name="searchbtn" > search </button>
+                     <button type="submit" class="btn btn-type1 type1-colorText" name="searchbtn" > search </button>
                   </div>
                 </div>
                

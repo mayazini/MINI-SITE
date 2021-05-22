@@ -27,7 +27,7 @@
             </tr> 
               <tr>
                   <td colspan="3" style="text-align: left">
-                     <button type="submit" name="submitbtn" onclick="return AreUsure()" class="btn btn-outline-primary">delete</button>
+                     <button type="submit" name="submitbtn" onclick="return AreUsure()" class="btn btn-type1">delete</button>
                   </td>
               </tr>
           </tbody>

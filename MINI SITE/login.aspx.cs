@@ -29,16 +29,16 @@ namespace MINI_SITE
                     user = row["userName"].ToString();
                     if (user != "")
                     {
-                        this.Session["login_user"] = userNameForm;
-                        this.Session["login_userPass"] = passwordFrom;
+                        Session["login_user"] = userNameForm;
+                        Session["login_userPass"] = passwordFrom;
                         if (Convert.ToBoolean(row["admin"]))
                         {
-                            this.Session["user_isAdmin"] = true;
+                           Session["user_isAdmin"] = true;
                             Response.Redirect("AdminManage.aspx");
                         }
                         else
                         {
-                            this.Session["user_isAdmin"] = false;
+                            Session["user_isAdmin"] = false;
                             Response.Redirect("homepage.aspx");
                         }
                     }                 

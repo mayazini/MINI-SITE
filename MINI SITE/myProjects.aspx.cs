@@ -47,7 +47,7 @@ namespace MINI_SITE
             usersList += "<tr style = 'height: 50px'></tr>";
             usersList += "<tr> <td style='width:50px'></td>";
             usersList += "<td>";
-            usersList += "<a href =' createProject.aspx' class='btn btn-type1' style= 'width:300px; height:50px; background-color:#ffc107;font-size: 20px;color:black'>create new project</a>";
+            usersList += "<a href =' createProject.aspx' class='btn btn-type1 type1-colorText' style= 'width:300px; height:50px;font-size: 20px'>create a new project</a>";
             usersList += "</td>";
             usersList += "</tr>";
             usersList += "</table>";
