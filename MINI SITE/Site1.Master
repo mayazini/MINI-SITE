@@ -109,7 +109,14 @@
         <div class="col-md-3 mt-md-0 mb-3">
 
         <h5 class="text-uppercase footerTitleColor">Fun Fact!</h5>
-        <p class="footerTextColor">All of the colors in the website <br />are from the movie Parasite</p>
+        <p class="footerTextColor">All of the colors in the website <br />are based on a movie <br /> can you guess which movie? </p>
+           <p class="footerTitleColor">Leave your answer here</p>
+            <div class="row">
+                <input type="text" placeholder="your guess" name="guess" class="form-control input-sm" />
+                <input type="submit" class="type1-colorText btn-type1 form-control input-sm" value="send" name="submitbtn" >
+                <br />
+                <%=msg %>
+            </div>          
       </div>
         
      <div class="col-md-4 mt-md-0 mb-3">

@@ -11,11 +11,20 @@ namespace MINI_SITE
     {
         public string userName = "";
         public string forAdmin;
+        public string msg;
         public string makeItInvisible= "style='display : none'";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.Session["login_user"] != null)
             {
+                string guess=Request["guess"];
+                if(Request["guess"] != null)
+                {
+                    if (guess == "parasite")
+                    {
+                        msg = "corrrect!";
+                    }
+                }
                 //drop down menu if user logs in
                 makeItInvisible = " ";
                 //hello user
@@ -25,6 +34,10 @@ namespace MINI_SITE
                 {
                     forAdmin = "<a class='btn btn-type1 type1-colorText' href='AdminManage.aspx' role='button'>Admin Page</a>";
                 }
+            }
+            else if (this.Session["login_user"] == null && Request["guess"] != null)
+            {
+                msg = "for only logged in users!";
             }
         }
     }

@@ -152,12 +152,29 @@
             return bValidUnameLength && bOnlyEnglishLetters;
         }
 
+        function CheckAge() {
+            var age = document.getElementById("age");
+            var bValidAge;
+            var msg="";
+            if (!/^[0-9]*$/.test(age.value)) {
+                bValidAge = false;
+                msg = "age can only be numbers";
+            }
+            else {
+                bValidAge = true;
+                msg = "";
+            }      
+            document.getElementById("ageLabel").innerText = msg;
+            return bValidAge;
+        }
+
         function checkForm() {
             var bValidPassword = checkPassword();
+            var bValidAge = CheckAge();
             var bValidEmail = checkEmail();
             var bValidusername = checkUserName();
             var bValidId = checkId();
-            var bVerifyAll = bValidPassword && bValidEmail && bValidusername && bValidId;
+            var bVerifyAll = bValidPassword && bValidEmail && bValidusername && bValidId && bValidAge;
             return bVerifyAll;
         }
 
@@ -168,37 +185,37 @@
     <p class="siteTextColor">Please fill in this form to create an account.</p>
     <hr>
     
-    <label for="uname"><b>User Name</b></label>
+    <label for="uname" class="title-color"><b>User Name</b></label>
     <input  type="text" placeholder="Enter User Name" name="Uname" id="Uname" style="color:black" required/>
     <label for="uname" id="UnameLabel" style="color:red"></label>
     <label for="uname" id="UnameLabel2" style="color:red"><%=errorMsg %></label>
        <br /><br />
 
-    <label for="firstName"><b>Name</b></label>
+    <label for="firstName" class="title-color"><b>Name</b></label>
     <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" style="color:black" required/>
 
-    <label for="lastName"><b>Last Name</b></label>
+    <label for="lastName" class="title-color"><b>Last Name</b></label>
     <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" style="color:black" required/>
 
-      <label for="id"><b>Id</b></label>
+      <label for="id" class="title-color"><b>Id</b></label>
       <input type="text" placeholder="Enter Id" name="id" id="id" style="color:black" required />
        <label for="id" id="IdLabel" style="color:red"></label>
        <br /><br />
 
-      <label for="email"><b>Email</b></label>
+      <label for="email" class="title-color"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" id="email" style="color:black" required />
       <label for="email" id="emailLabel" style="color:red"></label>
        <br /><br />
 
-      <label for="skill"><b>skill</b></label>
+      <label for="skill" class="title-color"><b>skill</b></label>
       <input type="text" placeholder="Enter skill" name="skill" id="skill" style="color:black" required />
        <br /><br />
 
-      <label for="phone"><b>Phone number</b></label>
+      <label for="phone" class="title-color"><b>Phone number</b></label>
     <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" style="color:black" required/>
         <br /><br />
 
-    <label for="Gender"><b>Gender</b></label><br />
+    <label for="Gender" class="title-color"><b>Gender</b></label><br />
     <input type="radio" id="male" name="gender" value="male">
     <label for="male" style="color:white">Male</label><br>
     <input type="radio" id="female" name="gender" value="female">
@@ -208,42 +225,42 @@
 
     <br /><br />
   
-      <label for="age"><b>age</b></label>
+      <label for="age" class="title-color"><b>age</b></label>
     <input type="text" placeholder="Enter age" id="age" name="age" style="color:black"/>
-
+      <label for="email" id="ageLabel" style="color:red"></label>
       <br /><br />
-    <label for="interest"><b>Area of interest</b></label><br />
+    <label for="interest" class="title-color"><b>Area of interest</b></label><br />
     <input type="checkbox" id="int1" name="int1" value="Bike" />
     <label for="int1" style="color:white"> I like biking</label><br>
     <input type="checkbox" id="int2" name="int2" value="Car" />
     <label for="int2" style="color:white"> I like driving</label><br>
       <br /><br />
 
-    <label for="address"><b>Address</b></label><br /><br />
+    <label for="address" class="title-color"><b>Address</b></label><br /><br />
     <textarea placeholder="Enter address" name="address" id="address" required rows="3" style="color:black"></textarea>
         <br /><br />
 
-      <label for="music"><b>Genres of music</b></label><br />
+      <label for="music" class="title-color"><b>Genres of music</b></label><br />
     <input type="checkbox" id="mus1" name="mus1" value="Rock" />
     <label for="mus1"style="color:white"> Rock music</label><br>
     <input type="checkbox" id="mus2" name="mus2" value="Clasical"/>
     <label for="mus2" style="color:white"> Clasical music</label><br /><br />
 
-      <label for="feeling"><b>I'm feeling</b></label><br />
+      <label for="feeling" class="title-color"><b>I'm feeling</b></label><br />
     <select name="feeling" id="feeling" style="color:black">
         <option>good</option>
         <option>bad</option>
     </select>
       <br /><br />
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw" class="title-color"><b>Password</b></label>
     <input type="text" placeholder="Enter Password" name="password" id="password" style="color:black" required>
        <label for="psw" id="passwordLabel" style="color:red"></label>
        <br /><br />
 
-    <label for="verifypsw"><b>Verify Password</b></label>
+    <label for="verifypsw" class="title-color"><b>Verify Password</b></label>
     <input type="text" placeholder="Verify password" name="verifypsw" id="verifypsw" style="color:black" required/>    
-        <label for="verifypsw" id="verifyPasswordLabel" style="color:red"></label>
+        <label for="verifypsw" id="verifyPasswordLabel" style="color:red" ></label>
        <br /><br />
       <hr>
      <input type="submit" class="btn float-right btn-type2 type2-colorText"  value="Register" onsubmit="return checkForm()"/>

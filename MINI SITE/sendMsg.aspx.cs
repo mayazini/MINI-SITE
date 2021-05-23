@@ -28,7 +28,7 @@ namespace MINI_SITE
                     reciever = Request.QueryString["recieverName"];
                     if (Request.QueryString["isApproved"] == "true")
                     {
-                        message = "Congratulations, " + reciever + ". Welcome to our project";
+                        message = "Congratulations, "+ reciever +".Welcome to our project";
                     }
                 }
 
