@@ -1,6 +1,55 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="MINI_SITE.WebForm1" %>
+﻿<html>
+<head>
+    <%-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--%>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('images/desk.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<body>
+
+    <%--<div class="siteBackgroundColor">
+
+    <video style="width: 100%; height: 500px" controls autoplay>
+        <source src="images/videoForHome.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="center">choose a user</h1>
+    <div class="container center" style="width: auto; height: auto;">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="vl"></div>
+            <div class="col">
+                2 of 2
+              
+            </div>
+        </div>
+    </div>
+</div>--%>
+
+
+    <%--<div style="text-align:center; width: 300px;height: 200px;">--%>
+    <center><a href="noName.aspx" class=" GetStartedBtn center" style="width:200px;height:50px;text-decoration: none">Get Started</a></center>
+    <%--<input class="btn GetStartedBtn center" style="width:200px;height:50px" value="Get Started"/>
+        <button class="btn GetStartedBtn center" style="width:200px;height:50px"></button>--%>
+    <%-- </div>--%>
+
     <%--<table style="width:100%;height:100%; color:white" >
         <tr>
              <td style="width:100%; height:100%;vertical-align:top" ><iframe name="trailer" style="width:100%;height:100%" src="https://www.youtube.com/embed/zSWdZVtXT7E"></iframe></td>
@@ -46,6 +95,8 @@
             </td>          
         </tr>
      </table>--%>
+</body>
+</html>
 
 
 
@@ -60,22 +111,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-</asp:Content>

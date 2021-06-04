@@ -14,13 +14,13 @@ namespace MINI_SITE
         private void BuildTable(string sql)
         {
             DataTable dt = SQLHelper.SelectData(sql);
-            usersList += "<table class='myTable '>";
+            usersList += "<table class='myTable'>";
             usersList += "<thead>";
             usersList += "<tr>";
             usersList += "<th scope = 'col'>  </th>";
-                usersList += "<th scope= 'col'>";
+            usersList += "<th scope= 'col'>";
             usersList += "Subject";
-            usersList += "</tr>";
+            usersList += "</tr>";          
             usersList += "</thead>";
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -29,9 +29,12 @@ namespace MINI_SITE
                 usersList += "<td style='width:20%'>";
                 usersList += dt.Rows[i]["Subject"];
                 usersList += "</td>";
-                usersList += "<td style='width:40%'> </td>";
-                usersList += "<td style='width:20%'>";
+                usersList += "<td style='width:30%'> </td>";
+                usersList += "<td style='width:10%'>";
                 usersList += "<a href= 'seeMore.aspx?Id= " + dt.Rows[i]["Id"] + "'>see more</a>";
+                usersList += "</td>";
+                usersList += "<td style='width:10%'>";
+                usersList += "<a href= 'deleteMsg.aspx?Id= " + dt.Rows[i]["Id"] + "'>delete message</a>";
                 usersList += "</td>";
                 usersList += "</tr>";
             }
@@ -39,13 +42,29 @@ namespace MINI_SITE
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["login_user"] != null)
+            if (Session["login_user"] == null)
             {
-                BuildTable("select Subject,Id from Inbox where reciever= N'" + Session["login_user"]+"'");
+                Response.Redirect("login.aspx");
             }
             else
             {
-                Response.Redirect("login.aspx");
+                if (Request["searchbtn"] == null)
+                {
+                    BuildTable("select Subject,Id from Inbox where reciever= N'" + Session["login_user"] + "'");
+                }
+                else
+                {
+                    string sql = "select Subject,Id from Inbox where reciever= N'" + Session["login_user"] + "' and ";
+                    string subject = Request["subject"];
+                    if (subject != "")
+                    {
+                        sql += " subject like N'%" + subject + "%'";
+                    }                  
+                    BuildTable(sql);
+
+                }
+
+
             }
         }
     }

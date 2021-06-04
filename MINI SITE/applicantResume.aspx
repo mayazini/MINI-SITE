@@ -4,17 +4,17 @@
     <%=usersList %>
     <div class="container siteTextColor" style="font-size: 30px">
         <h1 class="title-color">user name: </h1>
-        <%=username %>
+        <p class="siteTextColor"><%=username %></p>
         <h1 class="title-color">firstName: </h1>
-        <%=firstName %>
+        <p class="siteTextColor"><%=firstName %></p>
         <h1 class="title-color">lastName: </h1>
-        <%=lastName %>
+        <p class="siteTextColor"><%=lastName %></p>
         <hr />
         <h1 class="title-color">email: </h1>
-        <%=email %>
+        <p class="siteTextColor"><%=email %></p>
         <h1 class="title-color">age: </h1>
-        <%=age %>
+        <p class="siteTextColor"><%=age %></p>
         <br />
-        <a href="sendMsg.aspx?recieverName=<%= username%>&isApproved=true&projectName=<%=projectName %>" type="submit" class="btn btn-type2 type2-colorText" name="submitbtn">approve</a>
+        <button type="submit" class="btn btn-type2 type2-colorText" name="approve"><a href="sendMsg.aspx?recieverName=<%= username%>&isApproved=true&projectName=<%=projectName %>" >approve</a></button>
     </div>
 </asp:Content>

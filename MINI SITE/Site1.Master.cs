@@ -17,12 +17,17 @@ namespace MINI_SITE
         {
             if (this.Session["login_user"] != null)
             {
+               
                 string guess=Request["guess"];
-                if(Request["guess"] != null)
+                if(Request["guess"] != null && Request["submitbtn1"] != null)
                 {
                     if (guess == "parasite")
                     {
                         msg = "corrrect!";
+                    }
+                    else
+                    {
+                        msg = "false!";
                     }
                 }
                 //drop down menu if user logs in
@@ -32,7 +37,7 @@ namespace MINI_SITE
                 //link to admin page only if admin
                 if (Convert.ToBoolean(this.Session["user_isAdmin"]))
                 {
-                    forAdmin = "<a class='btn btn-type1 type1-colorText' href='AdminManage.aspx' role='button'>Admin Page</a>";
+                    forAdmin = "<li class='menu'><a class='btn btn-type1 type1-colorText' href='AdminManage.aspx' role='button'>Admin Page</a></li>";
                 }
             }
             else if (this.Session["login_user"] == null && Request["guess"] != null)

@@ -15,6 +15,7 @@ namespace MINI_SITE
         public string user ="";
         protected void Page_Load(object sender, EventArgs e)
         {
+            //add different msgs if user doesn't exist or doesn't match pass
             String userNameForm = Request["uname"];
             String passwordFrom = Request["password"];
   
@@ -39,7 +40,7 @@ namespace MINI_SITE
                         else
                         {
                             Session["user_isAdmin"] = false;
-                            Response.Redirect("homepage.aspx");
+                            Response.Redirect("noName.aspx");
                         }
                     }                 
                 }

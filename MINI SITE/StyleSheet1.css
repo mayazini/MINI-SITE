@@ -1,5 +1,10 @@
 ﻿body {
 }
+
+.full{
+    width:100%;
+    height:100%;
+}
 /*general colors*/
 .siteTextColor {
     color: black;
@@ -19,13 +24,43 @@
     color: #225e62;
 }
 
+.GetStartedBtn {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: transparent;
+    /* background-color: transparent;*/
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 4px #000000;
+}
 
+    .GetStartedBtn:hover {
+        background-color: #000000;
+        opacity: 0.6;
+        color: white;
+        box-shadow: none;
+    }
+
+    .GetStartedBtn:active {
+        box-shadow: none;
+        color: white;
+        background-color: #000000;
+        opacity: 0.6;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
 .container {
     padding: 20px;
     background-color: #aac8b7;
     width: 35%;
     height: 100%;
     color: white;
+    
 }
 
 .type1-colorText {
@@ -90,7 +125,7 @@ input[type=text], input[type=password] {
 
 
 button {
-    background-color: #4CAF50;
+   
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -153,9 +188,16 @@ h2 {
 /*///*/
 
 
-.center{
-    vertical-align:middle;
+.center {
+    vertical-align: middle;
+    text-align: center;
 }
+
+.vl {
+    border-left: 6px solid #225e62;
+    height: 1000px;
+}
+
  input[type=text]:focus, input[type=password]:focus {
         background-color: #ddd;
         outline: none;
@@ -164,6 +206,9 @@ h2 {
 hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
+}
+.myTableColor {
+    background-color: #225e62;
 }
 .myTable {
     margin-left: auto;

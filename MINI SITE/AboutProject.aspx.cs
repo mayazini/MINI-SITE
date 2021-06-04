@@ -16,6 +16,7 @@ namespace MINI_SITE
         public string msg;
         public string projectId;
         public string about;
+        public string makeBtnInvis;
         protected void Page_Load(object sender, EventArgs e)
         {
             projectName = Request.QueryString["queryProjectname"];
@@ -30,28 +31,35 @@ namespace MINI_SITE
                     row = dt.Rows[0];
                     nameCreator = row["nameCreator"].ToString();
                     projectDescription = row["projectDescription"].ToString();
-                    about= row["about"].ToString();
+                    about = row["about"].ToString();
 
                 }
-                if (Request["submitbtn"] != null)
+                if (Request.QueryString["approved"] == "")
                 {
-                    if (Session["login_user"] != null)
+                    if (Request["submitbtn"] != null)
                     {
-                        string userName = Session["login_user"].ToString();// keep the skill in session
-                        string skill = SQLHelper.SelectScalarToString("select skill from users where userName = N'" + userName + "'");
-                        int a = SQLHelper.DoQuery("insert into JobOffers (userName, userSkill, projectName,projectId, isApproved) values ('" + userName + "', '" + skill + "', '" + projectName + "', '"+projectId+"', 'false')");
-                        if (a > 0)
+                        if (Session["login_user"] != null)
                         {
-                            msg = "application sent";
-                        }
-                        Session["userSkill"] = skill;
+                            string userName = Session["login_user"].ToString();// keep the skill in session
+                            string skill = SQLHelper.SelectScalarToString("select skill from users where userName = N'" + userName + "'");
+                            int a = SQLHelper.DoQuery("insert into JobOffers (userName, userSkill, projectName,projectId, isApproved) values ('" + userName + "', '" + skill + "', '" + projectName + "', '" + projectId + "', 'false')");
+                            if (a > 0)
+                            {
+                                msg = "application sent";
+                            }
+                            Session["userSkill"] = skill;
 
+                        }
+                        else
+                        {
+                            msg = "To apply you have to be logged in";
+                        }
                     }
-                    else
-                    {
-                        msg = "To apply you have to be logged in";
-                    }
-                }    
+                }
+                else
+                {
+                    makeBtnInvis = "style='display : none'";
+                }
             }
         }
     }

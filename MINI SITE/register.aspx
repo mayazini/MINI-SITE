@@ -186,7 +186,7 @@
     <hr>
     
     <label for="uname" class="title-color"><b>User Name</b></label>
-    <input  type="text" placeholder="Enter User Name" name="Uname" id="Uname" style="color:black" required/>
+    <input  type="password" placeholder="Enter User Name" name="Uname" id="Uname" style="color:black" required/>
     <label for="uname" id="UnameLabel" style="color:red"></label>
     <label for="uname" id="UnameLabel2" style="color:red"><%=errorMsg %></label>
        <br /><br />
@@ -254,12 +254,12 @@
       <br /><br />
 
     <label for="psw" class="title-color"><b>Password</b></label>
-    <input type="text" placeholder="Enter Password" name="password" id="password" style="color:black" required>
+    <input type="password" placeholder="Enter Password" name="password" id="password" style="color:black" required>
        <label for="psw" id="passwordLabel" style="color:red"></label>
        <br /><br />
 
     <label for="verifypsw" class="title-color"><b>Verify Password</b></label>
-    <input type="text" placeholder="Verify password" name="verifypsw" id="verifypsw" style="color:black" required/>    
+    <input type="password" placeholder="Verify password" name="verifypsw" id="verifypsw" style="color:black" required/>    
         <label for="verifypsw" id="verifyPasswordLabel" style="color:red" ></label>
        <br /><br />
       <hr>

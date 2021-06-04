@@ -11,8 +11,8 @@ namespace MINI_SITE
     public partial class resume : System.Web.UI.Page
     {
         public string usersList;
-        public string username="";
-        public string projectName="";
+        public string username = "";
+        public string projectName = "";
         public string firstName = "";
         public string lastName = "";
         public string email = "";
@@ -52,7 +52,8 @@ namespace MINI_SITE
         protected void Page_Load(object sender, EventArgs e)
         {
             string userName = Request.QueryString["queryUsername"];
-            projectName = Request.QueryString["projectName"];           
+            projectName = Request.QueryString["projectName"];
+            string projectId = Request.QueryString["projectId"];
             username = userName;
             //BuildTable("select userName, firstName, lastName, email, age from users where userName = N'"+userName+"'");
             DataTable dt = SQLHelper.SelectData("select userName, firstName, lastName, email, age from users where userName = N'" + userName + "'");
@@ -65,9 +66,11 @@ namespace MINI_SITE
                 email = row["email"].ToString();
                 age = row["age"].ToString();
             }
-                if (Request["submitbtn"] != null)
+
+            if (Request["approve"] != null)
             {
-                SQLHelper.DoQuery("update JobOffers set isApproved = 'true' where userName= N'"+userName+"'");
+                string sql= "update JobOffers set isApproved = 'true' where userName= N'" + userName + "' and id='" + projectId + "'";
+                SQLHelper.DoQuery(sql);
             }
         }
     }

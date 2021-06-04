@@ -16,19 +16,19 @@
 		<div class="col-md-9">
 			<div class="contact-form">
 				<div class="form-group">
-				  <label class="control-label col-sm-2" for="subject">Subject:</label>
+				  <label class="control-label col-sm-2 siteTextColor" for="subject">Subject:</label>
 				  <div class="col-sm-10">          
 					  <input type="text" class="form-control" id="subject" placeholder="Enter the subject" name="subject" value="<%=subject %>" required>
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label class="control-label col-sm-2" for="fname">From:</label>
+				  <label class="control-label col-sm-2 siteTextColor" for="fname">From:</label>
 				  <div class="col-sm-10">          
 					  <input type="text" class="form-control" id="fName" placeholder="Enter your user name" name="fName" value="<%=from %>" required>
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label class="control-label col-sm-2" for="tName">To:</label>
+				  <label class="control-label col-sm-2 siteTextColor" for="tName">To:</label>
 				  <div class="col-sm-10">          
 					<input type="text" class="form-control" id="tName" placeholder="Enter reciever user name" name="tName" value="<%=reciever %>" required>
 				  </div>
@@ -40,7 +40,7 @@
 				  </div>
 				</div>--%>
 				<div class="form-group">
-				  <label class="control-label col-sm-2" for="message">Message:</label>
+				  <label class="control-label col-sm-2 siteTextColor" for="message">Message:</label>
 				  <div class="col-sm-10">
 					<textarea class="form-control" rows="5" id="message" name="message"><%=message %></textarea>
 				  </div>

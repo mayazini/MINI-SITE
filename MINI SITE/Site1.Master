@@ -28,11 +28,12 @@
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="gallery.aspx" role="button">Gallery</a>&nbsp;&nbsp;&nbsp;</li>
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="login.aspx" role="button">Login</a>&nbsp;&nbsp;&nbsp;</li>
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="Projects.aspx" role="button">Projects</a>&nbsp;&nbsp;&nbsp;</li>
-                            <li class="menu"><%=forAdmin %></li>
+                            <%=forAdmin %>
                             <li> <div class="dropdown menu" <%=makeItInvisible %> style="width:150px; height:55px">
                            <button class="btn btn-type1 type1-colorText" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu " role="menu" aria-labelledby="menu1" >
+                              <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="updatePass.aspx">update pass</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="createProject.aspx">create new projects</a></li>
@@ -113,7 +114,7 @@
            <p class="footerTitleColor">Leave your answer here</p>
             <div class="row">
                 <input type="text" placeholder="your guess" name="guess" class="form-control input-sm" />
-                <input type="submit" class="type1-colorText btn-type1 form-control input-sm" value="send" name="submitbtn" >
+                <input type="submit" class="type1-colorText btn-type1 form-control input-sm" value="send" name="submitbtn1" >
                 <br />
                 <%=msg %>
             </div>          
