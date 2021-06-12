@@ -65,7 +65,7 @@ namespace MINI_SITE
                 }
 
                 usersList += "<td>";
-                usersList += "<div class='card card-backgroundcolor' style='width: 22rem; height: auto'><a href='deleteProject.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["Id"] + "' class='btn btn-danger' style='decoration:none; height:30px;width:100px'>delete</a><h1 class='card-title-TextColor' >" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 class= 'card-TextColor'>by: " + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text card-TextColor' >description: " + dt.Rows[i]["projectDescription"] + "</p> <a href =' AboutProject.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["id"] + "&approved=' class='btn btn-card card-btn-TextColor' >More about the project</a></div>";
+                usersList += "<div class='card card-backgroundcolor' style='width: 22rem; height: auto'><a href='deleteProject.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["Id"] + "' class='btn btn-danger' style='text-decoration:none; height:30px;width:100px'>delete</a><h1 class='card-title-TextColor' >" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 class= 'card-TextColor'>by: " + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text card-TextColor' >description: " + dt.Rows[i]["projectDescription"] + "</p> <a href =' AboutProject.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["id"] + "&approved=' class='btn btn-card card-btn-TextColor' >More about the project</a></div>";
                 usersList += "</td>";
 
                 if (counter == 3)

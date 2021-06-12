@@ -38,7 +38,7 @@ namespace MINI_SITE
                     }
                     else
                     {
-                        string sql = "delete from inbox where id = N'" + id + "'";
+                        string sql = "delete from inbox where id = '" + id + "'";
                         SQLHelper.DoQuery(sql);
                         Response.Redirect("deleteMsg.aspx?message=message " + subject + " was deleted, redirecting to inbox page");
                     }

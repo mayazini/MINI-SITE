@@ -105,7 +105,9 @@
     <Content Include="homepage.aspx" />
     <Content Include="seeMore.aspx" />
     <Content Include="sendMsg.aspx" />
+    <Content Include="sendtotrash.aspx" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="trash.aspx" />
     <Content Include="Web.config" />
     <Content Include="gallery.aspx" />
     <Content Include="login.aspx" />
@@ -120,6 +122,7 @@
     <Content Include="AboutProject.aspx" />
     <Content Include="deleteMsg.aspx" />
     <Content Include="deleteProject.aspx" />
+    <Content Include="sent.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="inbox.aspx.cs">
@@ -172,6 +175,13 @@
     <Compile Include="sendMsg.aspx.designer.cs">
       <DependentUpon>sendMsg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sendtotrash.aspx.cs">
+      <DependentUpon>sendtotrash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sendtotrash.aspx.designer.cs">
+      <DependentUpon>sendtotrash.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +224,13 @@
     </Compile>
     <Compile Include="DeleteUser.aspx.designer.cs">
       <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trash.aspx.cs">
+      <DependentUpon>trash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trash.aspx.designer.cs">
+      <DependentUpon>trash.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>
@@ -270,6 +287,13 @@
     </Compile>
     <Compile Include="deleteProject.aspx.designer.cs">
       <DependentUpon>deleteProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sent.aspx.cs">
+      <DependentUpon>sent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sent.aspx.designer.cs">
+      <DependentUpon>sent.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -14,16 +14,23 @@ namespace MINI_SITE
         public string redirectJs = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            int affectedRows = 0;
-            userPass = this.Session["login_userPass"].ToString();
-            if (Request["submitbtn"] != null)
+            if (Session["login_user"] != null)
             {
-                affectedRows=SQLHelper.DoQuery(string.Format("update users set password=N'{0}' where username=N'{1}'", Request["password"], this.Session["login_user"]));
-                if (affectedRows == 1)
+                int affectedRows = 0;
+                userPass = this.Session["login_userPass"].ToString();
+                if (Request["submitbtn"] != null)
                 {
-                    msg = "Password was successfully changed";
-                    redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 5000);";
+                    affectedRows = SQLHelper.DoQuery(string.Format("update users set password=N'{0}' where username=N'{1}'", Request["password"], this.Session["login_user"]));
+                    if (affectedRows == 1)
+                    {
+                        msg = "Password was successfully changed";
+                        redirectJs = "setTimeout(\"location.href = 'AdminManage.aspx';\", 5000);";
+                    }
                 }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
             }
         }
     }

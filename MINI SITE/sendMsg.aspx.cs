@@ -38,7 +38,7 @@ namespace MINI_SITE
 
                 if (Request["submitbtn"] != null)
                 {
-                    msg = SQLHelper.DoQuery("insert into Inbox (sender,reciever,message,Subject) values (N'"+Request["fName"]+"', N'"+Request["tName"]+"', N'"+ Request["message"] + "' , N'"+ Request["subject"] + "')");
+                    msg = SQLHelper.DoQuery("insert into Inbox (sender,reciever,message,Subject,trash) values (N'"+Request["fName"]+"', N'"+Request["tName"]+"', N'"+ Request["message"] + "' , N'"+ Request["subject"] + "','false')");
                 }
 
                 if (msg > 0)
