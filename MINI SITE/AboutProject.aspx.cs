@@ -17,49 +17,58 @@ namespace MINI_SITE
         public string projectId;
         public string about;
         public string makeBtnInvis;
+        public string redirectJs;
         protected void Page_Load(object sender, EventArgs e)
         {
-            projectName = Request.QueryString["queryProjectname"];
-            projectId = Request.QueryString["projectId"];
-            if (projectName != null && projectName != "")
+            if (Session["login_user"] != null)
             {
-                DataRow row;
-                DataTable dt = SQLHelper.SelectData(string.Format("select nameCreator, projectDescription,about from Projects where id = N'{0}'", projectId));
-                int rows = dt.Rows.Count;// fix the row text dt.rows.count - doesnt work
-                if (rows >= 1)
+                projectName = Request.QueryString["queryProjectname"];
+                projectId = Request.QueryString["projectId"];
+                if (projectName != null && projectName != "")
                 {
-                    row = dt.Rows[0];
-                    nameCreator = row["nameCreator"].ToString();
-                    projectDescription = row["projectDescription"].ToString();
-                    about = row["about"].ToString();
-
-                }
-                if (Request.QueryString["approved"] == "")
-                {
-                    if (Request["submitbtn"] != null)
+                    DataRow row;
+                    DataTable dt = SQLHelper.SelectData(string.Format("select nameCreator, projectDescription,about from Projects where id = N'{0}'", projectId));
+                    int rows = dt.Rows.Count;// fix the row text dt.rows.count - doesnt work
+                    if (rows >= 1)
                     {
-                        if (Session["login_user"] != null)
-                        {
-                            string userName = Session["login_user"].ToString();// keep the skill in session
-                            string skill = SQLHelper.SelectScalarToString("select skill from users where userName = N'" + userName + "'");
-                            int a = SQLHelper.DoQuery("insert into JobOffers (userName, userSkill, projectName,projectId, isApproved) values ('" + userName + "', '" + skill + "', '" + projectName + "', '" + projectId + "', 'false')");
-                            if (a > 0)
-                            {
-                                msg = "application sent";
-                            }
-                            Session["userSkill"] = skill;
+                        row = dt.Rows[0];
+                        nameCreator = row["nameCreator"].ToString();
+                        projectDescription = row["projectDescription"].ToString();
+                        about = row["about"].ToString();
 
-                        }
-                        else
+                    }
+                    if (Request.QueryString["approved"] == "")
+                    {
+                        if (Request["submitbtn"] != null)
                         {
-                            msg = "To apply you have to be logged in";
+                            if (Session["login_user"] != null)
+                            {
+                                string userName = Session["login_user"].ToString();// keep the skill in session
+                                string skill = SQLHelper.SelectScalarToString("select skill from users where userName = N'" + userName + "'");
+                                int a = SQLHelper.DoQuery("insert into JobOffers (userName, userSkill, projectName,projectId, isApproved) values ('" + userName + "', '" + skill + "', '" + projectName + "', '" + projectId + "', 'false')");
+                                if (a > 0)
+                                {
+                                    msg = "application sent, redirecting to projects";
+                                    redirectJs = "setTimeout(\"location.href = 'Projects.aspx';\", 3000);";
+                                }
+                                Session["userSkill"] = skill;
+
+                            }
+                            else
+                            {
+                                msg = "To apply you have to be logged in";
+                            }
                         }
                     }
+                    else
+                    {
+                        makeBtnInvis = "style='display : none'";
+                    }
                 }
-                else
-                {
-                    makeBtnInvis = "style='display : none'";
-                }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
             }
         }
     }

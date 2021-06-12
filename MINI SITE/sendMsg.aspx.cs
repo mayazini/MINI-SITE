@@ -28,7 +28,11 @@ namespace MINI_SITE
                     reciever = Request.QueryString["recieverName"];
                     if (Request.QueryString["isApproved"] == "true")
                     {
-                        message = "Congratulations, "+ reciever +".Welcome to our project";
+                        message = "Here you can send a message to the user to tell them the good news and what is next";
+                    }
+                    else if(Request.QueryString["isApproved"] == "false")
+                    {
+                        message = "Here you can send a message to the user to tell them that there was a change of plans...";
                     }
                 }
 
@@ -39,8 +43,8 @@ namespace MINI_SITE
 
                 if (msg > 0)
                 {
-                    alert = "Message sent successfully";
-                    redirectJs = "setTimeout(\"location.href = 'Projects.aspx';\", 5000);";
+                    alert = "Message sent successfully, redirecting to inbox";
+                    redirectJs = "setTimeout(\"location.href = 'inbox.aspx';\", 3000);";
                 }
                 else
                 {

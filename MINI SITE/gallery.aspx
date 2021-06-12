@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div <%=makeTableInvisible %>>
+    <div>
 
         <img src="images/interstellar.jpg" style="width: 400px; height: 300px" />
 
@@ -66,5 +66,5 @@
             It's based on a real story with a Quentin Tarantino ending
         </p>
     </div>
-    <p style="color: white"><%=msg %></p>
+ 
 </asp:Content>

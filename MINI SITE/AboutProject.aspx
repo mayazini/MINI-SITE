@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AboutProject.aspx.cs" Inherits="MINI_SITE.WebForm18" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        <%=redirectJs%>
+    </script>
     <div class="container siteTextColor" style="font-size: 30px; height: auto; width: auto">
         <h1 class="title-color">project Name: </h1>
         <p class="siteTextColor"><%=projectName %></p>

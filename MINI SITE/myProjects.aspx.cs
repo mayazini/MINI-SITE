@@ -26,18 +26,15 @@ namespace MINI_SITE
                     usersList += "<tr> <td style='width:100px'></td>";
                     isNotClosed = true;
                 }
-
                 usersList += "<td>";
                 usersList += "<div class='card card-backgroundcolor' style='width: 22rem; height: auto'><h1 class='card-title-TextColor' >" + dt.Rows[i]["projectName"] + "</h1><br /> <h5 class='card-TextColor'>by: " + dt.Rows[i]["nameCreator"] + " </h5><p class='card-text card-TextColor'>description: " + dt.Rows[i]["projectDescription"] + "</p> <a href = 'jobOffers.aspx?queryProjectname=" + dt.Rows[i]["projectName"] + "&projectId= "+ dt.Rows[i]["Id"] + "' class='btn btn-card card-btn-TextColor' >See who would like to join</a></div>";
                 usersList += "</td>";
-
                 if (counter == 3)
                 {
                     counter = -1;
                     usersList += "</tr> <tr style = 'height: 100px'></tr>";
                     isNotClosed = false;
                 }
-
                 counter++;
                 i++;
             }

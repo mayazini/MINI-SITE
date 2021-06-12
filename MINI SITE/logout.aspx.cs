@@ -11,9 +11,10 @@ namespace MINI_SITE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // if user logs in and whants to log out                      
-                Session.Abandon();
-                Response.Redirect("homepage.aspx");
+            // if user logs in and whants to log out
+            Application["loggedUsers"] = (int)(Application["loggedUsers"]) - 1;
+            Session.Abandon();
+            Response.Redirect("homepage.aspx");
 
         }
     }

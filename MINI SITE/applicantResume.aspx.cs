@@ -17,60 +17,71 @@ namespace MINI_SITE
         public string lastName = "";
         public string email = "";
         public string age = "";
-        //private void BuildTable(string sql)
-        //{
-        //    DataTable dt = SQLHelper.SelectData(sql);
-        //    usersList += "<table class='table table-dark'>";
-        //    usersList += "<thead>";
-        //    usersList += "<tr>";
-        //    usersList += "<th scope = 'col'> # </th>";
-        //    for (int i = 0; i < dt.Columns.Count; i++)
-        //    {
-        //        usersList += "<th scope= 'col'>";
-        //        usersList += dt.Columns[i].ColumnName; 
-        //        usersList += "</th>";
-        //    }
-        //    usersList += "</tr>";
-        //    usersList += "</thead>";
-
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        usersList += "<tr>";
-        //        usersList += "<td>" + i + "</td>";
-        //        for (int j = 0; j < dt.Columns.Count; j++)
-        //        {
-        //            usersList += "<td>";
-        //            usersList += dt.Rows[i][j];
-        //            usersList += "</td>";
-        //        }
-        //        usersList += "<td>";
-        //        usersList += "</td>";
-        //        usersList += "</tr>";
-        //    }
-        //    usersList += "</table>";
-        //}
+        public string msg;
+        public string redirectJs;
+        public string btn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string userName = Request.QueryString["queryUsername"];
-            projectName = Request.QueryString["projectName"];
-            string projectId = Request.QueryString["projectId"];
-            username = userName;
-            //BuildTable("select userName, firstName, lastName, email, age from users where userName = N'"+userName+"'");
-            DataTable dt = SQLHelper.SelectData("select userName, firstName, lastName, email, age from users where userName = N'" + userName + "'");
-            DataRow row;
-            if (dt.Rows.Count >= 1)
+            if (Session["login_user"] != null)
             {
-                row = dt.Rows[0];
-                firstName = row["firstName"].ToString();
-                lastName = row["lastName"].ToString();
-                email = row["email"].ToString();
-                age = row["age"].ToString();
-            }
+                string userName = Request.QueryString["queryUsername"];
+                projectName = Request.QueryString["projectName"];
+                string projectId = Request.QueryString["projectId"];
+                username = userName;
+                if (Request["isApproved"] == "false")
+                {
+                    btn = "approve";
+                    if (Request["btn"] != null)
+                    {
+                        string sql = "update JobOffers set isApproved = 'true' where userName= N'" + userName + "' and id='" + projectId + "'";
+                        SQLHelper.DoQuery(sql);
+                        Response.Redirect("sendMsg.aspx?projectName=" + projectName + "&recieverName=" + userName + "&isApproved=true");
+                    }
+                }
+                else if(Request["isApproved"] == "true")
+                {
+                    btn = "unapprove";
+                    if (Request["btn"] != null)
+                    {
+                        string sql = "update JobOffers set isApproved = 'false' where userName= N'" + userName + "' and id='" + projectId + "'";
+                        SQLHelper.DoQuery(sql);
+                        Response.Redirect("sendMsg.aspx?projectName=" + projectName + "&recieverName=" + userName + "&isApproved=false");
+                    }
+                }
 
-            if (Request["approve"] != null)
+                //BuildTable("select userName, firstName, lastName, email, age from users where userName = N'"+userName+"'");
+                DataTable dt = SQLHelper.SelectData("select userName, firstName, lastName, email, age from users where userName = N'" + userName + "'");
+                DataRow row;
+                if (dt.Rows.Count >= 1)
+                {
+                    row = dt.Rows[0];
+                    firstName = row["firstName"].ToString();
+                    lastName = row["lastName"].ToString();
+                    email = row["email"].ToString();
+                    age = row["age"].ToString();
+                }
+                //if (Request["isApproved"] == "false")
+                //{
+                //    if (Request["approve"] != null)
+                //    {
+                //        string sql = "update JobOffers set isApproved = 'true' where userName= N'" + userName + "' and id='" + projectId + "'";
+                //        SQLHelper.DoQuery(sql);
+                //        Response.Redirect("sendMsg.aspx?projectName=" + projectName + "&recieverName=" + userName + "&isApproved=true");
+                //    }
+                //}
+                //else
+                //{
+                //    if (Request["approve"] != null)
+                //    {
+                //        string sql = "update JobOffers set isApproved = 'true' where userName= N'" + userName + "' and id='" + projectId + "'";
+                //        SQLHelper.DoQuery(sql);
+                //        Response.Redirect("sendMsg.aspx?projectName=" + projectName + "&recieverName=" + userName + "&isApproved=true");
+                //    }
+                //}
+            }
+            else
             {
-                string sql= "update JobOffers set isApproved = 'true' where userName= N'" + userName + "' and id='" + projectId + "'";
-                SQLHelper.DoQuery(sql);
+                Response.Redirect("login.aspx");
             }
         }
     }

@@ -1,17 +1,19 @@
 ﻿body {
 }
 
-.full{
-    width:100%;
-    height:100%;
+.full {
+    width: 100%;
+    height: 100%;
 }
 /*general colors*/
 .siteTextColor {
     color: black;
 }
+
 .siteBackgroundColor {
     background-color: #9a7d5a;
 }
+
 .btn-type1 {
     background-color: #aac8b7;
 }
@@ -37,6 +39,15 @@
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: 0 4px #000000;
+    /*margin-left: 50px;*/
+    margin-right:600px;
+
+    /* margin: auto;
+    position: absolute;
+    top: 50%;
+
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);*/
 }
 
     .GetStartedBtn:hover {
@@ -54,13 +65,25 @@
         box-shadow: 0 5px #666;
         transform: translateY(4px);
     }
+
+.getStartedContainer {
+    width: 1000px;
+    /*padding: 10px;*/
+    /* margin: auto;*/
+    margin-right: 10000px;
+    /*margin: 0;*/
+    position: absolute;
+    top: 75%;
+    /*-ms-transform: translateY(-188%);*/
+    transform: translateY(-210%);
+}
+
 .container {
     padding: 20px;
     background-color: #aac8b7;
     width: 35%;
     height: 100%;
     color: white;
-    
 }
 
 .type1-colorText {
@@ -100,7 +123,6 @@
 
 .footerTextColor {
     color: white;
- 
 }
 
 .footerTitleColor {
@@ -108,9 +130,9 @@
 }
 
 /*page menu*/
-.menu{
-    width:150px;
-    height:100px;
+.menu {
+    width: 150px;
+    height: 100px;
 }
 /*login*/
 input[type=text], input[type=password] {
@@ -125,7 +147,6 @@ input[type=text], input[type=password] {
 
 
 button {
-   
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -133,6 +154,7 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
 .buttonhref {
     font: bold 11px Arial;
     text-decoration: none;
@@ -144,16 +166,16 @@ button {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
-    button:hover {
-        opacity: 0.8;
-    }
+
+button:hover {
+    opacity: 0.8;
+}
 
 
 
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
-
 }
 
 img.avatar {
@@ -170,6 +192,7 @@ table {
 h2 {
     color: rebeccapurple;
 }
+
 .button:hover {
     background-color: #3e8e41
 }
@@ -198,18 +221,20 @@ h2 {
     height: 1000px;
 }
 
- input[type=text]:focus, input[type=password]:focus {
-        background-color: #ddd;
-        outline: none;
-    }
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
 
 hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
+
 .myTableColor {
     background-color: #225e62;
 }
+
 .myTable {
     margin-left: auto;
     margin-right: auto;
@@ -226,7 +251,7 @@ hr {
     text-indent: initial;
     border-spacing: 2px;
     border-color: grey;
-    color:black;
+    color: black;
 }
 
 /*.submitbtn {
@@ -282,8 +307,8 @@ h4 {
 .btnForUser {
     display: inline-block;
     font-weight: 400;
-    height:32px;
-    width:40px;
+    height: 32px;
+    width: 40px;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -294,12 +319,12 @@ h4 {
     line-height: 0.5;
     border-radius: .25rem;
     transition: color .15s;
-    background-color:black;
+    background-color: black;
 }
 
 
 .btncontainer {
-    width:35px;
+    width: 35px;
     height: 50px;
     position: relative;
 }

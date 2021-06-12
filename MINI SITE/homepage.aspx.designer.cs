@@ -7,11 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace MINI_SITE
 {
-
-
-    public partial class WebForm1
+    public partial class noName
     {
     }
 }

@@ -23,7 +23,7 @@ namespace MINI_SITE
             for (int i = 0; i < dt.Columns.Count; i++)
             {
                 usersList += "<th scope= 'col'>";
-                usersList += dt.Columns[i].ColumnName;              
+                usersList += dt.Columns[i].ColumnName;
                 usersList += "</th>";
             }
             usersList += "<th scope= 'col'>More Information</th>";
@@ -42,11 +42,11 @@ namespace MINI_SITE
                 }
 
                 usersList += "<td>";
-                usersList += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] +"&projectName=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["id"] + "'>More Info</a>";
+                usersList += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] + "&projectName=" + dt.Rows[i]["projectName"] + "&projectId=" + dt.Rows[i]["id"] + "&isApproved=false'>More Info</a>";
                 usersList += "</td>";
                 usersList += "<td>";
 
-                
+
                 usersList += "</td>";
                 usersList += "</tr>";
             }
@@ -81,7 +81,7 @@ namespace MINI_SITE
                 }
 
                 usersList1 += "<td>";
-                usersList1 += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] + "&projectName=" + dt.Rows[i]["projectName"] + "'>More Info</a>";
+                usersList1 += "<a href='applicantResume.aspx?queryUsername=" + dt.Rows[i]["Username"] + "&projectName=" + dt.Rows[i]["projectName"] + "&isApproved=true'>More Info</a>";
                 usersList1 += "</td>";
                 usersList1 += "<td>";
 
@@ -94,9 +94,15 @@ namespace MINI_SITE
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BuildTable("select userName,projectName,userSkill,id from jobOffers where projectId = N'"+Request.QueryString["projectId"] + "' and isApproved='false'");
-            BuildTable1("select userName,projectName,userSkill from jobOffers where projectId = N'"+Request.QueryString["projectId"] + "' and isApproved='true'");
-
+            if (Session["login_user"] != null)
+            {
+                BuildTable("select userName,projectName,userSkill,id from jobOffers where projectId = N'" + Request.QueryString["projectId"] + "' and isApproved='false'");
+                BuildTable1("select userName,projectName,userSkill from jobOffers where projectId = N'" + Request.QueryString["projectId"] + "' and isApproved='true'");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="applicantResume.aspx.cs" Inherits="MINI_SITE.resume" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        <%= redirectJs%>
+    </script>
     <%=usersList %>
     <div class="container siteTextColor" style="font-size: 30px">
         <h1 class="title-color">user name: </h1>
@@ -15,6 +18,8 @@
         <h1 class="title-color">age: </h1>
         <p class="siteTextColor"><%=age %></p>
         <br />
-        <button type="submit" class="btn btn-type2 type2-colorText" name="approve"><a href="sendMsg.aspx?recieverName=<%= username%>&isApproved=true&projectName=<%=projectName %>" >approve</a></button>
+        <button type="submit" class="btn btn-type2 type2-colorText" name="btn"><a href="sendMsg.aspx?recieverName=<%= username%>&isApproved=true&projectName=<%=projectName %>"  class=" type2-colorText"><%=btn %></a></button>
+        <p><%=msg %></p>
     </div>
+    
 </asp:Content>

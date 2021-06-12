@@ -23,11 +23,11 @@ namespace MINI_SITE
                 }
                 else
                 {
-                    string fName = Request["firstName"];
-                    string lName = Request["lastName"];
-                    string pass = Request["password"];
-                    string skill = Request["skill"];
-                    string id = Request["id"];
+                    string fName = Request["firstName"].Trim();
+                    string lName = Request["lastName"].Trim();
+                    string pass = Request["password"].Trim();
+                    string skill = Request["skill"].Trim();
+                    string id = Request["id"].Trim();
                     SQLHelper.DoQuery("insert into users (userName, firstName, lastName, password, id, skill, admin) values (N'" + uname + "',N'" + fName + "',N'" + lName + "',N'" + pass + "','" + id + "', '"+ skill + "', 'false')");
                     Response.Redirect("Login.aspx");
                 }

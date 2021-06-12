@@ -4,6 +4,8 @@
 
 <html>
 <head runat="server">
+    
+    <%----%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,7 +23,7 @@
                        <%-- <h1 style="vertical-align:top;" class="siteTextColor">Cinema Lovers </h1>--%>
                         <img src="images/logoSite.png" style="height: 120px; width: 160px;vertical-align:top; float:left"/>
                     </td>
-                    <td style="width:70%; ">   
+                    <td style="width:90%; ">   
                         <ul class="nav nav-pills" style="text-align:center">
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="homepage.aspx" role="button">Home</a>&nbsp;&nbsp;&nbsp;</li>
                            <%-- <li><a class="btn btn-type1 type1-colorText" href="about.aspx" role="button">About Page</a>&nbsp;&nbsp;&nbsp;</li>--%>
@@ -29,11 +31,10 @@
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="login.aspx" role="button">Login</a>&nbsp;&nbsp;&nbsp;</li>
                             <li class="menu"><a class="btn btn-type1 type1-colorText" href="Projects.aspx" role="button">Projects</a>&nbsp;&nbsp;&nbsp;</li>
                             <%=forAdmin %>
-                            <li> <div class="dropdown menu" <%=makeItInvisible %> style="width:150px; height:55px">
-                           <button class="btn btn-type1 type1-colorText" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
+                            <li> <div class="dropdown menu" <%=makeItInvisible %> >
+                           <button style="width:151px; height:42px;margin-top: 0.5px;" class="btn btn-type1 type1-colorText" type="button" id="menu1" data-toggle="dropdown"><%=userName %>
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu " role="menu" aria-labelledby="menu1" >
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.aspx">logout</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="updatePass.aspx">update pass</a></li>
                               <li role="presentation"><a role="menuitem" tabindex="-1" href="createProject.aspx">create new projects</a></li>
@@ -50,7 +51,7 @@
                 </table>
 
             <table style="width:100%">
-                <tr style="height:50px"></tr>
+                <tr style="height:30px"></tr>
                 <tr>
                     <td style="width:100%; height:100%">
                           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >                       
@@ -79,7 +80,7 @@
             <p>instegram: im_mayazini</p>
           </li>
           <li>
-            <p>facebook:for old people</p>
+            <p>facebook: for old people</p>
           </li>
           <li>
             <p>youtube: a secret</p>
@@ -125,7 +126,7 @@
         <h5 class="text-uppercase footerTitleColor">About Cinema Lovers</h5>
         <p class="footerTextColor">We hope that people from all over the world can connect through </p>
         <p class="footerTextColor">their love to cinema and film making</p>
-        <p class="footerTextColor">currently we have x happy users from all over the world</p>
+        <p class="footerTextColor">currently we have <%=appli %> happy logged in users at the moment from all over the world</p>
         <p class="footerTextColor">Join today and be apart of a very special community!</p>
 
     </div>

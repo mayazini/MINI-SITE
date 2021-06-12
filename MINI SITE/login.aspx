@@ -4,14 +4,15 @@
 
 
     <div class="container">
+        <h1 class="title-color">Log In</h1>
         <div class="imgcontainer">
-            <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+            <img src="images/הורדה.png" alt="Avatar" class="avatar">
         </div>
 
         <label for="uname">
             <p class="siteTextColor">Username</p>
         </label>
-        <input type="text" placeholder="Enter Username" name="uname" style="color: black" required />
+        <input type="text" placeholder="Enter User name" name="uname" style="color: black" required />
 
         <label for="password">
             <p class="siteTextColor">Password</p>
@@ -30,7 +31,7 @@
         <%--////  --%>
         <a href="register.aspx" class="footerTitleColor">sign up</a>
         <br />
-        <a href="forgotPass.aspx" class="footerTitleColor">forgot password??</a>
+        
 
     </div>
     <%--/////--%>

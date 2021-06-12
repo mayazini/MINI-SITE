@@ -13,8 +13,10 @@ namespace MINI_SITE
         public string forAdmin;
         public string msg;
         public string makeItInvisible= "style='display : none'";
+        public string appli;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (this.Session["login_user"] != null)
             {
                
@@ -44,6 +46,15 @@ namespace MINI_SITE
             {
                 msg = "for only logged in users!";
             }
+            if(Application["loggedUsers"] != null)
+            {
+                appli = Application["loggedUsers"].ToString();
+            }
+            else
+            {
+                appli = "0";
+            }
+            
         }
     }
 }
