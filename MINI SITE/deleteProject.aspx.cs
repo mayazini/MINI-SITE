@@ -39,7 +39,7 @@ namespace MINI_SITE
 
                     if (Request["submitbtn"] != null)
                     {
-                        int a = SQLHelper.DoQuery("delete from Projects where id = N'" + projectId + "'");
+                        int a = SQLHelper.DoQuery("delete from Projects where id ='" + projectId + "'");
                         if (a > 0)
                         {
                             msg = "project deleted, redirecting to projects";

@@ -15,7 +15,7 @@
         <h1 class="title-color">project story: </h1>
         <p class="siteTextColor"><%=about %></p>
         <br />
-        <input type="submit" name="submitbtn" value="apply" class="btn btn-type2 type2-colorText" <%=makeBtnInvis %>/>
+        <input type="submit" name="submitbtn" value="<%=changeBtn %>" class="btn btn-type2 type2-colorText"/>
         <br />
         <p style="color: black"><%=msg %></p>
     </div>
